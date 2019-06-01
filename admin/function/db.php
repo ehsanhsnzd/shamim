@@ -1,8 +1,8 @@
 <?
 //MySQL database
-define( "dbuser", "shamimba_admin" );
-define( "dbpassword", "fifa2007" );
-define( "dbname", "shamimba_shamim" );
+define( "dbuser", "shamimgr_admin" );
+define( "dbpassword", "Fifa2007#" );
+define( "dbname", "shamimgr_shamim" );
 define( "dbhost", "localhost" );
 
 //Site HTTP URL
