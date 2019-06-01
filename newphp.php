@@ -1,0 +1,7 @@
+<?
+
+echo "sss";
+
+echo phpinfo();
+
+?>

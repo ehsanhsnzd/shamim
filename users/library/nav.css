@@ -1,0 +1,239 @@
+/* =Styles for the lab
+-------------------------------------------------------------- */
+ 
+#wrapper {
+	min-width:1000px;
+ 
+	
+ 
+}
+.navlist nav {
+ 
+	padding:0px 0;
+ 	background-color:#0069B4;
+	width:100%;
+	text-align:right;
+	direction:rtl;
+	vertical-align:top;
+	position:relative;
+	
+	
+}
+.navlist nav ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+	vertical-align:top;
+	position:relative;
+ 
+	
+
+}
+.navlist nav ul li {
+    display:inline-block;
+    position:relative;
+	border-right:1px solid #525252;
+	padding:0px;
+	margin:0px;
+		position:relative;
+ 
+}
+
+
+
+/* sub .navlist navigation */
+.navlist nav li ul {    
+    background-color:#525252;
+    position:absolute;
+   right:0px;
+    top:40px; /* make this equal to the line-height of the links (specified below) */
+    width:200px;
+		z-index:100;
+	
+}
+.navlist nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+		z-index:10000;
+}
+.navlist nav li li ul {
+    position:absolute;
+    top:0;
+    right:200px; /* make this equal to the width of the sub .navlist nav above */
+    margin:0;
+		z-index:10000;
+}
+
+/* style all links */
+.navlist nav a {
+    line-height:40px;
+    padding:0 12px;
+    margin:0 12px;
+
+}
+.navlist nav a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+	font-size:11px;
+
+}
+.navlist nav a:hover,
+.navlist nav a:focus,
+.navlist nav a:active {
+    color:#2DBC70;
+}
+
+/* style sub level links */
+.navlist nav li li a {
+    border-bottom:solid 1px #FFC20F;
+    margin:0 10px;
+    padding:0;
+			font-size:10px;
+				color:#fff;
+}
+.navlist nav li li:last-child a {
+    border-bottom:none;
+			font-size:10px;
+}
+
+/* hide sub menu links */
+ul.sub-menu {
+    display:none;
+}
+
+@media only screen and (max-width: 760px) {
+/* show arrows for dropdowns */
+.navlist nav li.dropdown > a {
+    background-image:url('../img/arrow-down.png');
+    background-position:left 20px;
+    background-repeat:no-repeat;
+}
+
+.navlist nav li li.dropdown > a {
+    background-image:url('../img/arrow-right.png');
+    background-position:left 16px;
+    background-repeat:no-repeat;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navacc nav {
+	direction:rtl;
+	text-align:right;
+	width:auto;
+}
+.navacc nav ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+	vertical-align:top;
+	z-index:100;
+	text-align:right;
+
+}
+.navacc nav ul li {
+    display:inline-block;
+    position:relative;
+ 
+	padding:4px 6px 0px 0px;
+	margin:0px;
+	
+}
+
+
+
+/* sub .navacc navigation */
+.navacc nav li ul {    
+    background-color:#201264;
+    position:absolute;
+   right:0px;
+    top:40px; /* make this equal to the line-height of the links (specified below) */
+    width:100%;
+		z-index:100;
+}
+.navacc nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+.navacc nav li li ul {
+    position:absolute;
+    top:0;
+    right:200px; /* make this equal to the width of the sub .navacc nav above */
+    margin:0;
+}
+
+/* style all links */
+.navacc nav a {
+    line-height:40px;
+    padding:0 12px;
+    margin:0 12px;
+	fon
+
+}
+.navacc nav a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+ 
+
+}
+.navacc nav a:hover,
+.navacc nav a:focus,
+.navacc nav a:active {
+    color:#2DBC70;
+}
+
+/* style sub level links */
+.navacc nav li li a {
+ 
+    margin:0 10px;
+    padding:0;
+			font-size:10px;
+}
+.navacc nav li li:last-child a {
+    
+			font-size:10px;
+}
+
+/* hide sub menu links */
+ 
+/* show arrows for dropdowns */
+.navacc nav li.dropdown > a {
+    background-image:url('../img/arrow-down.png');
+    background-position:left 20px;
+    background-repeat:no-repeat;
+}
+
+.navacc nav li li.dropdown > a {
+    background-image:url('../img/arrow-right.png');
+    background-position:left 16px;
+    background-repeat:no-repeat;
+}

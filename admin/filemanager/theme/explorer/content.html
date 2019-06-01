@@ -1,0 +1,201 @@
+<div class="nav-bar bg-color-teal">
+	<div class="nav-bar-inner">
+		<span class="element"><a href="#./" class="fg-color-white">{$title}</a></span>
+		<span class="divider"></span>
+		<ul class="menu" id="path"></ul>
+		<div class="toolbar place-right">
+			<button class="bg-color-blue fg-color-white" id="mkdir" title="New Folder">
+				<i class="icon-new"></i>
+			</button>
+			<button class="bg-color-blue fg-color-white" id="upload" title="Upload">
+				<i class="icon-upload-2"></i>
+			</button>
+			<button class="bg-color-blue fg-color-white" id="search" title="Search">
+				<i class="icon-search"></i>
+			</button>
+		</div>
+	</div>
+</div>
+ <div class="page-sidebar text-center">
+	<ul>
+		<li>
+			<a onclick="window.location.hash+='../'">
+				<h1 class="icon-arrow-up-3" style="font-size:40px"></h1>
+				<p>Go up</p>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:history.back()">
+				<h1 class="icon-arrow-left-3" style="font-size:40px"></h1>
+				<p>Go back</p>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:history.forward()">
+				<h1 class="icon-arrow-right-3" style="font-size:40px"></h1>
+				<p>Go forward</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="page fill">
+	<table class="hovered">
+		<thead>
+			<tr>
+				<th>Name <small></small></th>
+				<th style="width:15%">Data modified <small></small></th>
+				<th style="width:12%">Type <small></small></th>
+				<th style="width:10%">Perms <small></small></th>
+				<th style="width:9%">Size <small></small></th>
+			</tr>
+		</thead>
+		<tbody id="explorer">
+			<tr id="fetch"><td colspan="5">You must enable javascript</td></tr>
+		</tbody>
+	</table>
+</div>
+<div style="position:fixed;left:0;bottom:0;z-index:-1">
+<a href="http://20script.ir"><small>(c) Metro UI CSS</small></a>
+</div>
+<div class="app-bar fg-color-white" style="display:none">
+	<div class="place-left" style="margin-top: 13px">
+		<div class="grid body-secondary-text">
+			<div class="row">
+				<div class="spanD offset1" id="name"><span></span></div>
+				<div class="spanD" id="modi">Modified: <span></span></div>
+				<div class="spanD" id="crea">Created: <span></span></div>
+			</div>
+			<div class="row">
+				<div class="spanD offset1" id="type"><span></span></div>
+				<div class="spanD" id="size">Size: <span></span></div>
+				<div class="span1"></div>
+			</div>
+			<div class="row">
+				<div class="spanD offset1" id="fullPath"></div>
+				<div class="span1"></div>
+				<div class="span1"></div>
+			</div>
+		</div>
+	</div>
+	<div class="place-right" style="margin-top: 13px">
+		<div class="grid">
+			<div class="row">
+				<a target="_blank" id="d" class="button bg-color-teal fg-color-white">
+					<i class="icon-download"></i>
+				</a>
+				<button class="bg-color-teal fg-color-white" id="cut">
+					<i class="icon-copy"></i>Cut
+				</button>
+				<button class="bg-color-teal fg-color-white" id="copy">
+					<i class="icon-copy"></i>Copy
+				</button>
+				<button class="bg-color-teal fg-color-white" id="paste" style="display:none">
+					<i class="icon-clipboard-2"></i>Paste
+				</button>
+				<button class="bg-color-teal fg-color-white" id="cancel" style="display:none">
+					<i class="icon-cancel-2"></i>Cancel
+				</button>
+			</div>
+			<div class="row">
+				<button class="bg-color-teal fg-color-white" id="rename">
+					<i class="icon-pencil"></i>Rename
+				</button>
+				<button class="bg-color-teal fg-color-white" id="delete">
+					<i class="icon-remove"></i>Delete
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+	check(); 
+	
+	$(".hovered th").each(function(x) {
+		$(this).click(function() {
+			sortTable(x, this);
+		})
+	});
+	
+	$("#mkdir").click(function() {
+		$.Dialog({
+			'title'  : 'New folder',
+			'content': '<h3 style="display:none"></h3><img src="theme/images/preloader-w8-line-black.gif" id="loading" style="display:none"><form onsubmit="dialogForm(\'mkdir\', b[0], $(\'#dialogBox input[type=text]\').val());return false"><div class="input-control text"><input type="text" placeholder="Enter folder name..." /></div><input type="submit" value="Confirm"></form>',
+			'button': {
+				'action': function() {window.location.reload(true)}
+			}
+		});
+	});
+	
+	$("#search").click(function() {
+		$.Dialog({
+			'title'  : 'Search',
+			'content': '<form onsubmit="searchForm(this);return false"><div class="input-control text"><input name="q" type="text" placeholder="Enter search phrase..."><button class="btn-search" type="submit"></button></div><h3>Use wildcards *, ?, [seq], [!seq]</h3></form>'
+		});
+		if(window.location.hash.indexOf("?") != -1) {
+			$("#dialogBox input[name=q]").val(searchQuery);
+        }
+	});
+	
+	$("#upload").click(function() {
+		$.Dialog({
+			'title'  : 'Upload',
+			'content': '<form onsubmit="return false"><input type="file" name="fileUpload" id="fileUpload" multiple="multiple" /></form><h3></h3><div class="progress-bar"><div class="bar" style="width:0"></div></div><ul class="unstyled"></ul>',
+			'button': {
+				'action': function() {window.location.reload(true)}
+			}
+		});
+		uploadForm();
+	});
+	
+	$("#cut").click(function() {
+		action = "cut";
+		action_path();
+		paste_show();
+	});
+
+	$("#copy").click(function() {
+		action = "copy";
+		action_path();
+		paste_show();
+	});
+	
+	$("#paste").click(function() {
+		$.Dialog({
+			'title'  : action,
+			'content': '<h3 style="display:none"></h3><img src="theme/images/preloader-w8-line-black.gif" id="loading">',
+			'button': {
+				'action': function() {window.location.reload(true)}
+			}
+		});
+		dialogForm(action, actionPath, b[0]);
+		paste_hide();
+	});
+	
+	$("#cancel").click(function() {
+		paste_hide();
+	});
+
+	$("#rename").click(function() {
+        action_path();
+		$.Dialog({
+			'title'  : 'Rename',
+			'content': '<h3 style="display:none"></h3><img src="theme/images/preloader-w8-line-black.gif" id="loading" style="display:none"><form onsubmit="dialogForm(\'rename\', actionPath, $(\'#dialogBox input[name=file]\').val());return false"><div class="input-control text"><input type="text" name="file" /></div><input type="submit" value="Confirm"></form>',
+			'button': {
+				'action': function() {window.location.reload(true)}
+			}
+		});
+	});
+
+	$("#delete").click(function() {
+        action_path();
+		$.Dialog({
+			'title'  : 'Delete',
+			'content': '<h3 style="display:none"></h3><img src="theme/images/preloader-w8-line-black.gif" id="loading" style="display:none"><form onsubmit="dialogForm(\'delete\', actionPath);return false"><input type="submit" value="Confirm"></form>',
+			'button': {
+				'action': function() {window.location.reload(true)}
+			}
+		});
+	});
+});
+</script>

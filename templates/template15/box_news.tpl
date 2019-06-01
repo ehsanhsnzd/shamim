@@ -1,0 +1,1 @@
+<div style='margin-bottom:10'><span class='datenews'>{NEWS_DATE}</span><br><span class='newstitle'>{NEWS_TITLE}</span><br><a href='{NEWS_URL}'>{NEWS_ANNOUNCE}</a></div>

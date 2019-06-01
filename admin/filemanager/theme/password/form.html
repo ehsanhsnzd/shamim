@@ -1,0 +1,54 @@
+<div class="page secondary">
+	<div class="page-region">
+		<div class="page-region-content">
+			<div class="span3" style="margin-top:20%">
+				<form onsubmit="passwordForm(this);return false">
+					<div class="input-control password">
+						<input type="password" placeholder="Enter the password" />
+					</div>
+					<input type="submit" id="button" value="Log in">
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+function passwordForm(form) {
+	$.ajax({
+		type: "post",
+		url: "index.php",
+		data: {"pass": $("input[type=password]", form).val()},
+		dataType: "text",
+		timeout: 5000,
+		cache: false
+	}).always(function(data, status) {
+		if(data == "1" && status == "success") {
+			$(form).attr("onsubmit",
+						 "location.reload(1);return false");
+			$("<input>", {
+				style: "display:none",
+				type: "submit",
+				value: "Continue",
+				id: "continue",
+				onclick: "location.reload(1)"
+			}).appendTo(form);
+			$(":visible", form).hide("fast");
+			setTimeout(function(){$("#continue").show("slow")},300);
+		} else {
+			if($("span", form).length) {
+				$("span", form).append("!");
+			} else {
+				$("<span />", {
+					style: "display:none",
+					text: "Wrong password"
+				}).addClass("label important as-block")
+				.appendTo(form).show("fast");
+			}
+			$("input[type=password]", form).val("").focus();
+		}
+	});
+	
+	return false;
+}
+</script>

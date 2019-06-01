@@ -1,0 +1,50 @@
+A:link,A:visited {color: #0071B2;text-decoration: underline;}
+A:active,A:hover {color: #0071B2;text-decoration: underline;}
+body
+{
+background-color:#525151;
+}
+b,strong{font-weight:bold;}
+h1{color: #fdc161; font: 16px Arial; }
+
+
+p
+{
+margin:0px;
+padding:0px 0px 3px 0px;
+}
+
+b
+{
+color:#ebe9e9;
+}
+
+.box
+{
+margin:100px auto 0px auto;
+width:500px;
+background-color:#373737;
+border: #4a4a4a 4px solid;
+padding:20px;
+font: 12px Arial;
+color:#bbbbbb;
+}
+
+input
+{
+background-color:#fdc17a;
+border: 0px;
+border-radius:4px;
+cursor:pointer;
+color:#5c3302;
+font:14px Arial;
+font-weight:bold;
+text-shadow: #f2f2f0 1px 1px 2px;
+padding:5px 20px 5px 20px;
+}
+
+input:hover
+{
+background-color:#feb35b;
+}
+

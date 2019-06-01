@@ -1,0 +1,941 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+@font-face {
+    font-family: 'iran-sans';
+    src: url(../fonts/iran-sans.ttf),
+    	 url(../fonts/iran-sans.eot),
+    	 url(../fonts/iran-sans.woff);
+}
+@font-face {
+    font-family: 'orderprogress';
+    src: url(../fonts/orderprogress.ttf),
+    	 url(../fonts/orderprogress.eot),
+    	 url(../fonts/orderprogress.svg),
+    	 url(../fonts/orderprogress.woff);
+}
+body{
+	background: #f4f4f4;
+	font-family: 'iran-sans';
+	font-size: 0.9em;
+	color: #555;
+}
+
+ .pagelink{ color:#000;}
+/*-----------------------------------------header style-----------------------------*/
+header{	
+
+direction: rtl;
+	background: #fff;
+	box-shadow: 0 2px 20px -5px rgba(0,0,0,0.1);
+	width: 100%;
+	padding: 1em 0;
+	height:70px;
+	z-index: 1000;
+    top: 0;
+}
+.user-welcome{
+	float: left;
+}
+.header-maxwidth{
+	width: 92em;
+	margin: auto;
+	max-width: 95%;
+}
+header img{
+	float: right;
+}
+header nav{
+	font-size: 0.9em;
+	float: left;
+}
+header nav ul{
+	list-style: none;
+	float: right;
+}
+header nav ul a{
+	text-decoration: none;
+	color: #888;
+	-webkit-transition: color 0.2s;
+	-moz-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	transition: color 0.2s;
+}
+header nav ul a:hover{
+	text-decoration: none;
+	color: #222;
+}
+header nav ul li{
+	display: inline-block;
+	margin: 1em;
+}
+.header-buttons{
+	float: left;
+	margin: 0 1em;
+	margin-top: 0.3em;
+}
+header nav button{
+	background: #1ec561;
+	border: none;
+	border-bottom: 2px solid #0061B9;
+	cursor: pointer;
+	font-family: 'iran-sans';
+	color: #fff;
+	outline: none;
+	padding: 0.5em;
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
+}
+
+.sbmtclass{
+		background: #1ec561;
+	border: none;
+	border-bottom: 2px solid #0061B9;
+	cursor: pointer;
+	font-family: 'iran-sans';
+	color: #fff;
+	outline: none;
+	padding: 0.5em;
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
+	
+	
+	}
+header nav .login-button{
+	border-left: 1px solid #159247;
+	border-radius: 0 0.5em 0.5em 0;
+}
+header nav .register-button{
+	border-radius: 0.5em 0 0 0.5em;
+}
+header nav button:hover{
+	background: #0069B4;
+}
+
+
+#PageTitle{display:none;background-color:red; width:300px;height:200px; position:absolute; left:100px;}
+/*--------------------------------------- homepage top section -----------------------------------*/
+#homepage-top-section{
+	width: 100%;
+	height: 1030px;
+	background:url(../images/header.png) no-repeat;
+	background-size:100%;
+	text-align: center;
+	vertical-align:top;
+ 
+
+}
+
+#homepage-top-section2{
+	width: 100%;
+	height: 1200px;
+	background:url(../images/shamim-head.png) no-repeat;
+	background-size:100%;
+
+ 
+
+}
+
+#tile-head{
+	width: 100%;
+	height: 1350px;
+	background:url(../images/tile.jpg);
+	background-size:100%;
+	background-color:#F4F4F4;
+
+}
+
+#tile-head2{
+	width: 100%;
+	height:100%;
+ 
+ 
+	background:url(../images/tile.jpg);
+	background-size:100%;
+	background-color:#F4F4F4;
+
+}
+
+ 
+#top-section-div{
+	text-align:center;
+	width: 100%;
+	height: 88%;
+ 
+}
+#top-section-div a{
+	text-decoration: none;
+	color: #fff;
+}
+#top-section-text{
+	position: relative;
+	color: #fff;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+	max-width: 95%;
+	 
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+
+ 
+
+#top-section-big-text{
+	display: block;
+	font-size: 1.35em;
+	color:#888888;
+}
+#top-section-small-text{
+	display: block;
+	font-size: 0.7em;
+	margin: 0.5em 0;
+	color:#888888;
+}
+#top-order-print{
+	display: inline-block;
+	color:#FFF;
+	padding: 0.5em;
+	font-size: 0.5em;
+	border-radius: 0.9em;
+	background: #17AC48;
+	border-bottom: 2px solid #0b6428;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 60px;
+	transition: background 0.9s, transform 0.9s;
+	height:100px;
+	width:100px;
+ 
+}
+
+
+#top-order-month{
+	display: inline-block;
+	color:#FFF;
+	padding: 0.5em;
+	font-size: 12px;
+	text-decoration:none;
+	line-height:4;
+	border-radius: 0.9em;
+	background: #17AC48;
+	border-bottom: 2px solid #0b6428;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 60px;
+	transition: background 0.9s, transform 0.9s;
+	height:60px;
+	width:60px;
+	text-align:center;
+ 
+}
+ 
+ #month-day{
+	 text-decoration:none;
+	 color:#0069B4;
+	 
+	 
+	 }
+	 
+	  #month-day:hover{
+ 
+	 color:#E50651;
+	 
+	 
+	 }
+ 
+ #top-order-month:hover{
+	background: #12fC80;
+	color:#FFF;
+}
+#top-order-print:hover{
+	background: #0069b4;
+	color:#FFF;
+}
+
+
+#top-order-print:active{
+	background: #17AC48;
+	-ms-transform: translateY(0.2em); 
+    -webkit-transform: translateY(0.2em);
+    -moz-transform: translateY(0.2em);
+    -o-transform: translateY(0.2em);
+    transform: translateY(0.2em);
+}
+
+
+
+#type-order-print-active{
+	display: inline-block;
+	color:#FFF;
+	padding: 0.5em;
+	font-size: 16px;
+	border-radius: 0.9em;
+	background: #e59999;
+	border-bottom: 2px solid #b0063f;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 60px;
+	transition: background 0.9s, transform 0.9s;
+	height:80px;
+	width:80px;
+	margin:20px;
+	text-decoration:none;
+ 
+}
+
+
+#type-order-print{
+	display: inline-block;
+	color:#FFF;
+	padding: 0.5em;
+	font-size: 16px;
+	border-radius: 0.9em;
+	background: #e50651;
+	border-bottom: 2px solid #b0063f;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 60px;
+	transition: background 0.9s, transform 0.9s;
+	height:80px;
+	width:80px;
+	margin:20px;
+	text-decoration:none;
+ 
+}
+
+
+
+#type-order-print:hover{
+	background: #deb8c5;
+	color:#FFF;
+}
+#type-order-print:active{
+	background: #e50651;
+	-ms-transform: translateY(0.2em); 
+    -webkit-transform: translateY(0.2em);
+    -moz-transform: translateY(0.2em);
+    -o-transform: translateY(0.2em);
+    transform: translateY(0.2em);
+}
+@keyframes top-order-buttom{
+    0%   {
+    -ms-transform: translateX(0); 
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+	}
+    50%   {
+    -ms-transform: translateX(-0.2em); 
+    -webkit-transform: translateX(-0.2em);
+    -moz-transform: translateX(-0.2em);
+    -o-transform: translateX(-0.2em);
+    transform: translateX(-0.2em);
+	}
+    100%  {  
+    -ms-transform: translateX(0); 
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+	}
+}
+#top-section-animation{
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+ 
+	font-family: Verdana, Geneva, sans-serif;
+    animation-name: top-order-buttom;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/*-------------------------------------------- order progress div -------------------------------*/
+#order-progress-div{
+	width: 70em;
+	height: 8em;
+	max-height: auto;
+	max-width: 95%;
+	background: #fff;
+	border-radius: 0.5em;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+	margin: auto;
+	margin-top: -4em;
+	overflow: hidden;
+}
+#order-progress-div div{
+	width: 20%;
+	height: 8em;
+	border-left: 1px solid #e9e9e9;
+	float: right;
+	background: #ffffff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	-o-transition: background 0.2s;
+	transition: background 0.2s;
+}
+#order-progress-div div:hover{
+	background: #fafafa;
+}
+#order-progress-div div:last-child{
+	border-left: none;
+}
+.order-progress-icon1:before {
+    content: "\e922";
+    font-family: 'orderprogress';
+    color: #24ba18;
+    text-decoration: none;
+    font-size: 1.5em;
+	margin-left: 0.4em;
+	margin-bottom: -0.4em;
+}
+.order-progress-icon2:before {
+    content: "\e900";
+    font-family: 'orderprogress';
+    color: #029ee7;
+    text-decoration: none;
+    font-size: 1.5em;
+	margin-left: 0.4em;
+	margin-bottom: -0.4em;
+}
+.order-progress-icon3:before {
+    content: "\e90f";
+    font-family: 'orderprogress';
+    color: #e01515;
+    text-decoration: none;
+    font-size: 1.5em;
+	margin-left: 0.4em;
+	margin-bottom: -0.4em;
+}
+.order-progress-icon4:before {
+    content: "\e914";
+    font-family: 'orderprogress';
+    color: #8870ff;
+    text-decoration: none;
+    font-size: 1.5em;
+	margin-left: 0.4em;
+	margin-bottom: -0.4em;
+}
+.order-progress-icon5:before {
+    content: "\e901";
+    font-family: 'orderprogress';
+    color: #ffd200;
+    text-decoration: none;
+    font-size: 1.5em;
+	margin-left: 0.4em;
+	margin-bottom: -0.4em;
+}
+
+
+
+
+/*--------------------------------------------- pages style ----------------------------------------------*/
+.page-sheet{
+    width: 80em;
+    max-width: 96%;
+    margin: auto;
+    margin-top: 8em;
+    margin-bottom: 3em;
+    background: #fff;
+    padding: 1em;
+    border-radius: 0.5em;
+	box-shadow: 0 16px 12px -12px rgba(0,0,0,0.1);
+    line-height: 2.5;
+	text-align:right;
+}
+.page-sheet h3{
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+.page-sheet p{
+    color: #555;
+}
+.page-sheet hr{
+    border: none;
+    background: #e6e6e6;
+    margin: 1em 0;
+    height: 1px;
+    
+}
+#contact-page-form input{
+    width: 20em;
+    max-width: 100%;
+    margin: 0.5em 0;
+    border-radius: 0.4em;
+    font-family: 'iran-sans';
+    font-size: 0.8em;
+    height: 2em;
+    border: 1px solid #ccc;
+    padding: 0.4em;
+    outline: none;
+}
+#contact-page-form textarea{
+    width: 20em;
+    max-width: 100%;
+    margin: 0.3em 0;
+    border-radius: 0.4em;
+    font-family: 'iran-sans';
+    font-size: 0.8em;
+    height: 4em;
+    border: 1px solid #ccc;
+    padding: 0.4em;
+    outline: none;
+}
+#contact-page-form input[type=submit]{
+    width: 18em;
+    background: #20ac58;
+    max-width: 100%;
+    border-radius: 0.4em;
+    font-family: 'iran-sans';
+    font-size: 0.9em;
+    height: 2em;
+    border: none;
+    padding: 0.2em;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0.5em 0;
+}
+
+
+
+
+
+/*-------------------------------------------- about us mainpage ---------------------------------------------*/
+#about-us-mainpage{
+	width: 60em;
+	max-width: 90%;
+	height: auto;
+	margin: auto;
+	margin-top: 7em;
+	margin-bottom: 8em;
+ 
+	padding:20px 20px 20px 20px;    border-radius: 0.8em;
+	color:#FFF;
+	background-color:#C2D1D8;
+	
+}
+#about-us-mainpage h3{
+	font-weight: normal;
+	font-size: 1.1em;
+	text-align: center;
+	margin-bottom: 1em;
+		color:#777;
+}
+#about-us-mainpage p{
+    text-indent: 2em;
+	font-size: 0.9em;
+	color: #777;
+	line-height: 2.5;
+	text-align: justify;
+ 
+}
+
+
+
+
+/*------------------------------------- first page portfolio ---------------------------------*/
+#first-page-portfolio{
+	display: block;
+	width: 100%;
+	height: 300px;
+	background: #fff;
+	float: right;
+	padding: 7em 0 5em 0;
+}
+#first-page-portfolio article{
+	display: block;
+	width: 88em;
+	height: auto;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin: auto;
+}
+#first-page-portfolio h3{
+	font-size: 1.1em;
+	color: #555;
+	text-align: center;
+	font-weight: normal;
+}
+
+#first-page-portfolio article div{
+	width: 20em;
+	height: 15em;
+	margin: 1em;
+	float: right;
+	background: #aaa;
+	border-radius: 0.5em;
+
+}
+#fisrt-page-portfolio-link{
+	display: inline-block;
+}
+
+
+
+/*-------------------------------------------- first page clients --------------------------------------*/
+#first-page-clients{
+	display: block;
+	width: 100%;
+	height: auto;
+	float: right;
+	padding: 5em 0 5em 0;
+background: #f8f8f8;
+}
+#first-page-clients article{
+	display: block;
+	width: 83em;
+	height: auto;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin: auto;
+}
+#first-page-clients h3{
+	font-size: 1.1em;
+	color: #555;
+	text-align: center;
+	font-weight: normal;
+    margin-bottom: 1em;
+}
+
+#first-page-clients article div{
+	width: 5.5em;
+	height: 5.5em;
+	margin: 0.6em;
+	float: right;
+	background: #fff;
+	border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+#first-page-clients article div img{
+    width: 5.5em;
+}
+
+
+
+
+
+/*------------------------------------------------ Footer Style ----------------------------------------*/
+body>footer{
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    height: auto;
+}
+#footer-top-section{
+    width: 100%;
+    display: block;
+    height: auto;
+    float: right;
+    margin: 0;
+    padding: 1em 0;
+    background: #fff;
+}
+body>footer #footer-max-width{
+    width: 96em;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+body>footer #footer-max-width aside{
+    width: 22em;
+    margin: 1em;
+    float: right;
+    display: inline-block;
+    max-width: 96%;
+}
+#footer-bottom-section{
+	width: 100%;
+    display: block;
+    float: right;
+    padding: 1em 0;
+    font-size: 0.9em;
+    color: #555;
+}
+body>footer aside ul{
+    list-style: none;
+}
+body>footer aside ul a{
+    text-decoration: none;
+    color: #777;
+}
+body>footer aside ul a:hover{
+    color: #444;
+}
+body>footer aside ul li{
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+body>footer aside form input{
+    width: 20em;
+    max-width: 100%;
+    margin: 0.5em 0;
+    border-radius: 0.4em;
+    font-family: 'iran-sans';
+    font-size: 0.8em;
+    height: 2em;
+    border: 1px solid #ccc;
+    padding: 0.4em;
+    outline: none;
+}
+body>footer aside form textarea{
+    width: 20em;
+    max-width: 100%;
+    margin: 0.3em 0;
+    border-radius: 0.4em;
+    font-family: 'iran-sans';
+    font-size: 0.8em;
+    height: 4em;
+    border: 1px solid #ccc;
+    padding: 0.4em;
+    outline: none;
+}
+body>footer aside form input[type=submit]{
+    width: 18em;
+    background: #20ac58;
+    max-width: 100%;
+    border-radius: 0.4em;
+    font-family: 'iran-sans';
+    font-size: 0.9em;
+    height: 2em;
+    border: none;
+    padding: 0.2em;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0.5em 0;
+}
+body>footer aside h3{
+    color: #fff;
+    font-weight: normal;
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    border-radius: 0.5em 0 0 0.5em;
+    font-size: 1em;
+    border-right: 4px solid;
+    margin-bottom: 1em;
+}
+body>footer #footer-quick-access h3{
+    background: #24ba18;
+    border-right-color: #19970f;
+}
+body>footer #footer-panel-links h3{
+    background: #029ee7;
+    border-right-color: #0889c6;
+}
+body>footer #footer-contact-form h3{
+    background: #e01515;
+    border-right-color: #ba0707;
+}
+body>footer #footer-contact-info h3{
+    background: #f6bf00;
+    border-right-color: #f09b06;
+}
+body>footer aside p{
+    font-size: 0.9em;
+    color: #555;
+    line-height: 2.5;
+    padding-left: 1em;
+}
+body>footer aside hr{
+    border: none;
+    background: #ccc;
+    margin: 0.7em 0;
+    height: 1px;
+}
+body>footer #footer-bottom-right{
+    display: inline-block;
+    float: right;
+    line-height: 2.2;
+}
+body>footer #footer-bottom-right a{
+    text-decoration: none;
+    color: #555;    
+}
+body>footer #footer-bottom-left{
+    display: inline-block;
+    float: left;
+}
+body>footer #footer-bottom-max-width{
+    width: 110em;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+
+/*------------------------------------------------ User Login Style -------------------------------------------------*/
+#user-login-maxwidth{
+    display: block;
+    width: 50em;
+    margin: auto;
+    margin-top: 10em;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 25em;
+}
+#user-register-maxwidth{
+    display: block;
+    width: 25em;
+    margin: auto;
+    margin-top: 10em;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 25em;
+}
+#users-login-page-section{
+	display: inline-block;
+	width: 18em;
+	height: 14.5em;
+	max-width: 80%;
+	max-height: 90%;
+	background: #ffffff;
+	border-radius: 0.5em;
+	box-shadow: 0 16px 12px -12px rgba(0,0,0,0.1);
+	padding: 1.5em;
+    float: right;
+    margin: 2em;
+}
+#users-login-page-section p{
+    line-height: 2.4;
+    font-size: 0.9em;
+}
+#users-register-page-section{
+	display: inline-block;
+	width: 18em;
+	height: auto;
+	max-width: 80%;
+	max-height: 90%;
+	background: #ffffff;
+	border-radius: 0.5em;
+	box-shadow: 0 16px 12px -12px rgba(0,0,0,0.1);
+	padding: 1.5em;
+    float: right;
+    margin: 2em;
+    margin-bottom: 4em;
+}
+#users-register-page-section p{
+    line-height: 2.4;
+    font-size: 0.9em;
+}
+#users-login-page-form{
+	width: 100%;
+	margin: 0;
+}
+#users-login-page-form input[type=text], 
+#users-login-page-form input[type=password], 
+#users-login-page-form input[type=password], 
+#users-login-page-form input[type=email]{
+	width: 96%;
+	margin: 0;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+	font-family: 'iran-sans';
+	border-style: none;
+	border: 2px solid #ddd;
+	border-radius: 0.4em;
+	outline: none;
+	height: 1.9em;
+	font-size: 0.95em;
+	padding: 0 0.3em;
+	-webkit-transition: border-color 0.2s;
+	-moz-transition: border-color 0.2s;
+	-o-transition: border-color 0.2s;
+	max-width: 96%;
+}
+#users-login-page-form input[type=text]:hover, 
+#users-login-page-form input[type=password]:hover, 
+#users-login-page-form input[type=email]:hover{
+	border-color: #4fc0f4;
+}
+#users-login-page-form input[type=text]:focus,
+#users-login-page-form input[type=password]:focus,
+#users-login-page-form input[type=email]:focus{
+	border-color: #4fc0f4;
+}
+#users-login-page-form input[type=submit]{
+	width: auto;
+	font-family: 'iran-sans';
+	border-style: none;
+	border-radius: 0.4em;
+	outline: none;
+	background: #2497d8;
+	padding: 0.3em 1.8em;
+	padding-bottom: 0.5em;
+	cursor: pointer;
+	color: #fefefe;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	-o-transition: background 0.2s;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+#users-login-page-form input[type=submit]:hover{
+	background: #228ac6;
+}
+#users-password-recovery{
+	color: #82a4b8;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+#users-login-page-title{
+	text-align: center;
+	margin-bottom: 1.5em;
+	display: block;
+	font-size: 0.95em;
+	color: #444;
+}
+.login-alert{
+    display: block;
+    width: 18em;
+    max-width: 96%;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #e67d8c;
+    background: #ffe2e6;
+    color: #555;
+    height: auto;
+    margin: auto;
+    margin-bottom: -8em;
+    margin-top: 8em;
+}
+.edit-done-alert{
+	display: block;
+	width: 18em;
+	height: auto;
+	max-width: 80%;
+	max-height: 90%;
+	background: #dff8da;
+	border-radius: 0.5em;
+	margin:auto;
+	padding: 1.5em;
+	margin-top: 6em;
+	margin-bottom: 4em;
+	border:2px solid #41c55a;
+}
+
+
+
+
+ 

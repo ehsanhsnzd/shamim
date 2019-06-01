@@ -1,0 +1,3 @@
+[19-Apr-2017 13:51:19 Asia/Tehran] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 68032 bytes) in /home/shamimgr/public_html/j/server/php/UploadHandler.php on line 562
+[19-Apr-2017 14:12:03 Asia/Tehran] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 68032 bytes) in /home/shamimgr/public_html/j/server/php/UploadHandler.php on line 562
+[19-Apr-2017 16:04:22 Asia/Tehran] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 68032 bytes) in /home/shamimgr/public_html/j/server/php/UploadHandler.php on line 562

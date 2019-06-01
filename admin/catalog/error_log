@@ -1,0 +1,235 @@
+[12-Apr-2017 19:22:28 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[12-Apr-2017 19:22:28 Asia/Tehran] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/shamimba/public_html/admin/smarty/Smarty_Compiler.class.php on line 270
+[13-Apr-2017 11:25:33 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 11:25:34 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 11:57:27 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 11:57:55 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 11:58:00 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:00:23 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:00:29 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:01:53 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:02:00 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:06:05 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:06:10 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:06:24 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:06:33 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:13:59 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:14:03 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:14:22 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:14:26 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:15:09 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:39:44 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:39:49 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:55:09 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 12:59:42 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:00:26 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7900/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7900/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:13:15 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 13:13:21 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:16:02 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7901/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7901/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:16:31 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 13:16:43 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:27:03 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7902/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7902/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 13:27:22 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 13:27:28 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:28:44 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:29:11 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:29:11 Asia/Tehran] PHP Fatal error:  Call to undefined function newmagickwand() in /home/shamimba/public_html/admin/function/upload.php on line 3354
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: category in /home/shamimba/public_html/admin/catalog/add.php on line 32
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: title in /home/shamimba/public_html/admin/catalog/add.php on line 33
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: description in /home/shamimba/public_html/admin/catalog/add.php on line 34
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: keywords in /home/shamimba/public_html/admin/catalog/add.php on line 35
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: viewed in /home/shamimba/public_html/admin/catalog/add.php on line 46
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: data_hour in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: data_minute in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: data_second in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: data_month in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: data_day in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: data_year in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: author in /home/shamimba/public_html/admin/catalog/add.php on line 48
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: content_type in /home/shamimba/public_html/admin/catalog/add.php on line 49
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: downloaded in /home/shamimba/public_html/admin/catalog/add.php on line 50
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: model in /home/shamimba/public_html/admin/catalog/add.php on line 51
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: google_x in /home/shamimba/public_html/admin/catalog/add.php on line 55
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: google_y in /home/shamimba/public_html/admin/catalog/add.php on line 56
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: category2 in /home/shamimba/public_html/admin/catalog/add.php on line 81
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: category3 in /home/shamimba/public_html/admin/catalog/add.php on line 82
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: color in /home/shamimba/public_html/admin/catalog/add.php on line 95
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: photo in /home/shamimba/public_html/admin/function/upload.php on line 3310
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: type in /home/shamimba/public_html/admin/function/upload.php on line 3315
+[13-Apr-2017 13:29:21 Asia/Tehran] PHP Notice:  Undefined index: size in /home/shamimba/public_html/admin/function/upload.php on line 3325
+[13-Apr-2017 13:29:27 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:30:49 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:32:35 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 13:32:35 Asia/Tehran] PHP Fatal error:  Call to undefined function newmagickwand() in /home/shamimba/public_html/admin/function/upload.php on line 3354
+[13-Apr-2017 14:07:28 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:07:42 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:09:09 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:09:09 Asia/Tehran] PHP Fatal error:  Call to undefined function newmagickwand() in /home/shamimba/public_html/admin/function/upload.php on line 3354
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: category in /home/shamimba/public_html/admin/catalog/add.php on line 32
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: title in /home/shamimba/public_html/admin/catalog/add.php on line 33
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: description in /home/shamimba/public_html/admin/catalog/add.php on line 34
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: keywords in /home/shamimba/public_html/admin/catalog/add.php on line 35
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: viewed in /home/shamimba/public_html/admin/catalog/add.php on line 46
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: data_hour in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: data_minute in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: data_second in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: data_month in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: data_day in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: data_year in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: author in /home/shamimba/public_html/admin/catalog/add.php on line 48
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: content_type in /home/shamimba/public_html/admin/catalog/add.php on line 49
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: downloaded in /home/shamimba/public_html/admin/catalog/add.php on line 50
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: model in /home/shamimba/public_html/admin/catalog/add.php on line 51
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: google_x in /home/shamimba/public_html/admin/catalog/add.php on line 55
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: google_y in /home/shamimba/public_html/admin/catalog/add.php on line 56
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: category2 in /home/shamimba/public_html/admin/catalog/add.php on line 81
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: category3 in /home/shamimba/public_html/admin/catalog/add.php on line 82
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: color in /home/shamimba/public_html/admin/catalog/add.php on line 95
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: photo in /home/shamimba/public_html/admin/function/upload.php on line 3310
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: type in /home/shamimba/public_html/admin/function/upload.php on line 3315
+[13-Apr-2017 14:21:28 Asia/Tehran] PHP Notice:  Undefined index: size in /home/shamimba/public_html/admin/function/upload.php on line 3325
+[13-Apr-2017 14:21:33 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:21:38 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(/home/shamimba/public_html/content/7908/thumb2.jpg): failed to open stream: No such file or directory in /home/shamimba/public_html/admin/function/functions.php on line 816
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  getimagesize(/home/shamimba/public_html/content/7908/thumb2.jpg): failed to open stream: No such file or directory in /home/shamimba/public_html/admin/function/functions.php on line 817
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 897
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 900
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 902
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  getimagesize(/home/shamimba/public_html/content/7908/thumb2.jpg): failed to open stream: No such file or directory in /home/shamimba/public_html/admin/function/upload.php on line 2115
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  getimagesize(/home/shamimba/public_html/content/7908/thumb2.jpg): failed to open stream: No such file or directory in /home/shamimba/public_html/admin/function/functions.php on line 2653
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(/home/shamimba/public_html/content/7908/thumb2.jpg): failed to open stream: No such file or directory in /home/shamimba/public_html/admin/function/functions.php on line 2654
+[13-Apr-2017 14:22:07 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 2688
+[13-Apr-2017 14:22:13 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:25:16 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/shamimba/public_html/admin/function/functions.php on line 918
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/shamimba/public_html/admin/function/functions.php on line 918
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7909/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7909/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:26:25 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 14:26:30 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:26:56 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:27:03 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:27:05 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:27:08 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:27:11 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:42:45 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:42:48 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:43:09 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:43:09 Asia/Tehran] PHP Fatal error:  Uncaught exception 'ImagickException' with message 'unable to open image `/content/7910/conv-Untitled-3.jpg': No such file or directory @ error/blob.c/OpenBlob/2705' in /home/shamimba/public_html/admin/function/upload.php:3362
+Stack trace:
+#0 /home/shamimba/public_html/admin/function/upload.php(3362): Imagick->writeimage('/content/7910/c...')
+#1 /home/shamimba/public_html/admin/catalog/add.php(148): publication_photo_upload('7910')
+#2 {main}
+  thrown in /home/shamimba/public_html/admin/function/upload.php on line 3362
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: category in /home/shamimba/public_html/admin/catalog/add.php on line 32
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: title in /home/shamimba/public_html/admin/catalog/add.php on line 33
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: description in /home/shamimba/public_html/admin/catalog/add.php on line 34
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: keywords in /home/shamimba/public_html/admin/catalog/add.php on line 35
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: viewed in /home/shamimba/public_html/admin/catalog/add.php on line 46
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: data_hour in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: data_minute in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: data_second in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: data_month in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: data_day in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: data_year in /home/shamimba/public_html/admin/catalog/add.php on line 47
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: author in /home/shamimba/public_html/admin/catalog/add.php on line 48
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: content_type in /home/shamimba/public_html/admin/catalog/add.php on line 49
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: downloaded in /home/shamimba/public_html/admin/catalog/add.php on line 50
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: model in /home/shamimba/public_html/admin/catalog/add.php on line 51
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: google_x in /home/shamimba/public_html/admin/catalog/add.php on line 55
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: google_y in /home/shamimba/public_html/admin/catalog/add.php on line 56
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: category2 in /home/shamimba/public_html/admin/catalog/add.php on line 81
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: category3 in /home/shamimba/public_html/admin/catalog/add.php on line 82
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: color in /home/shamimba/public_html/admin/catalog/add.php on line 95
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: photo in /home/shamimba/public_html/admin/function/upload.php on line 3310
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: type in /home/shamimba/public_html/admin/function/upload.php on line 3315
+[13-Apr-2017 14:44:12 Asia/Tehran] PHP Notice:  Undefined index: size in /home/shamimba/public_html/admin/function/upload.php on line 3325
+[13-Apr-2017 14:44:18 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:44:21 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:44:41 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:46:34 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:46:50 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:46:51 Asia/Tehran] PHP Fatal error:  Uncaught exception 'ImagickException' with message 'unable to open image `/content/7913/conv-Untitled-3.jpg': No such file or directory @ error/blob.c/OpenBlob/2705' in /home/shamimba/public_html/admin/function/upload.php:3363
+Stack trace:
+#0 /home/shamimba/public_html/admin/function/upload.php(3363): Imagick->writeimage('/content/7913/c...')
+#1 /home/shamimba/public_html/admin/catalog/add.php(148): publication_photo_upload('7913')
+#2 {main}
+  thrown in /home/shamimba/public_html/admin/function/upload.php on line 3363
+[13-Apr-2017 14:47:16 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:47:19 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:47:38 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:47:38 Asia/Tehran] PHP Fatal error:  Uncaught exception 'ImagickException' with message 'unable to open image `/content/7914/conv-Untitled-3.jpg': No such file or directory @ error/blob.c/OpenBlob/2705' in /home/shamimba/public_html/admin/function/upload.php:3363
+Stack trace:
+#0 /home/shamimba/public_html/admin/function/upload.php(3363): Imagick->writeimage('/content/7914/c...')
+#1 /home/shamimba/public_html/admin/catalog/add.php(148): publication_photo_upload('7914')
+#2 {main}
+  thrown in /home/shamimba/public_html/admin/function/upload.php on line 3363
+[13-Apr-2017 14:48:30 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:48:34 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:48:52 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:48:53 Asia/Tehran] PHP Fatal error:  Uncaught exception 'ImagickException' with message 'unable to open image `/content/7915/conv-Untitled-3.jpg': No such file or directory @ error/blob.c/OpenBlob/2705' in /home/shamimba/public_html/admin/function/upload.php:3363
+Stack trace:
+#0 /home/shamimba/public_html/admin/function/upload.php(3363): Imagick->writeimage('/content/7915/c...')
+#1 /home/shamimba/public_html/admin/catalog/add.php(148): publication_photo_upload('7915')
+#2 {main}
+  thrown in /home/shamimba/public_html/admin/function/upload.php on line 3363
+[13-Apr-2017 14:50:10 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:50:29 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:50:30 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:50:30 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7916/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:50:30 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 14:50:30 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:50:30 Asia/Tehran] PHP Warning:  imagecreatefromjpeg(): '/home/shamimba/public_html/content/7916/Untitled-3.tif' is not a valid JPEG file in /home/shamimba/public_html/admin/function/functions.php on line 723
+[13-Apr-2017 14:50:30 Asia/Tehran] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/shamimba/public_html/admin/function/functions.php on line 738
+[13-Apr-2017 14:50:35 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:51:38 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:51:58 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:52:04 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:52:09 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:53:33 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:53:36 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:54:06 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[13-Apr-2017 14:54:11 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[14-Apr-2017 16:26:45 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[14-Apr-2017 16:40:29 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[16-Apr-2017 11:28:09 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:23:37 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:24:47 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:24:49 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:26:17 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:26:22 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:27:12 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 19:27:12 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 23:39:02 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 23:39:59 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[17-Apr-2017 23:40:05 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[18-Apr-2017 11:28:01 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[18-Apr-2017 11:28:01 Asia/Tehran] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/shamimba/public_html/admin/smarty/Smarty_Compiler.class.php on line 270
+[18-Apr-2017 11:28:08 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[18-Apr-2017 11:28:08 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60

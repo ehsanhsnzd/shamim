@@ -1,0 +1,1 @@
+[22-Apr-2017 03:26:27 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimgr/public_html/admin/function/mysqldb.php on line 60

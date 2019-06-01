@@ -1,0 +1,1 @@
+<div class='component'><a href="{URL}" id="{LINKNAME}" name="{LINKNAME}"><img src="{IMAGE}" border="0" alt="{TITLE}" {LIGHTBOX} id="{IMGNAME}" name="{IMGNAME}"></a></div>

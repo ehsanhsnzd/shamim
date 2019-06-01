@@ -1,0 +1,5 @@
+[09-Apr-2017 00:14:49 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[09-Apr-2017 00:15:30 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[09-Apr-2017 00:15:31 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[18-Apr-2017 00:32:21 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
+[18-Apr-2017 00:32:51 Asia/Tehran] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/shamimba/public_html/admin/function/mysqldb.php on line 60
