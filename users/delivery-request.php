@@ -91,8 +91,8 @@ if (isset($_POST['submit'])) {
                 <option value="<?=$order['order_invoice_code']?>"><?=$order['order_invoice_code']?></option>
             <? }
             $username_value=$_SESSION['print_username'];
-            $sql_username_name = mysql_query( "SELECT name,lastname FROM users WHERE login='$username_value'");
-            $sql_username_name_result = mysql_fetch_array($sql_username_name);
+            $sql_username_name = mysqli_query($connection,"SELECT name,lastname FROM users WHERE login='$username_value'");
+            $sql_username_name_result = mysqli_fetch_array($sql_username_name);
             $sql_user_realname = $sql_username_name_result['name']." ".$sql_username_name_result['lastname'];
 
             ?>
