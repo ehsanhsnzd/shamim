@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
            <input type="button" id="select_all" name="select_all" value="انتخاب همه"><br/>
             <?
             echo "<label for=\"order-reciver-name-input\">نام گیرنده مرسوله به طور کامل و دقیق:</label><br/>";
-			echo "<input type=\"text\" value='".$_SESSION["people_name"]."o".$_SESSION["people_last_name"]."' name=\"order-reciver-name-input\" id=\"order-reciver-name-input\" placeholder=\"مثلا محمد محمد زاده\"><br/>";
+			echo "<input type=\"text\" value='".$_SESSION["people_login"]."".$_SESSION["people_name"].$_SESSION["people_name"]." ".$_SESSION["people_last_name"]."' name=\"order-reciver-name-input\" id=\"order-reciver-name-input\" placeholder=\"مثلا محمد محمد زاده\"><br/>";
 			echo "<label for=\"order-recive-adress-input\">آدرس دقیق محل تحویل:</label><br/>";
 			echo "<textarea name=\"order-recive-adress-input\" id=\"order-recive-adress-input\" placeholder=\"مثلا تبریز، ولیعصر، شهریار، کوچه گلها، پلاک 12\"></textarea><br/>";
 			echo "<input type=\"submit\" name=\"submit\" value=\"ثبت درخواست ارسال\">";
