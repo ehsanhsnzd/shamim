@@ -137,7 +137,7 @@ echo ($server_output); // Tell me about the rabbits, George!
 //
 	$bucket_files = $site_amazon_prefix. "-files";
 	//$container_files = $s3->create_bucket($bucket_files,$region);
-	
+
 	$bucket_previews = $site_amazon_prefix. "-previews";
 	//$container_previews = $s3->create_bucket($bucket_previews,$region);
 
@@ -147,7 +147,7 @@ echo ($server_output); // Tell me about the rabbits, George!
 	 	echo("Error. It is impossible to create the bucket '".$bucket_files."'");
 	 	exit();
 	}
-	
+
 	if (!$container_previews->isOK())
 	{
 	 	echo("Error. It is impossible to create the bucket '".$bucket_previews."'");
@@ -163,12 +163,12 @@ $rs->open($sql);
 while(!$rs->eof)
 {
 	$storage_flag=true;
-	
+
 	$message_log="";
-	
+
 	$publication_path=$_SERVER["DOCUMENT_ROOT"].site_root.server_url($rs->row["server1"])."/".$rs->row["folder"];
 	//echo($publication_path."<br>");
-	
+
 	//Define items for every publication
 	$items_mass=array();
 	$sql="select id,url from items where id_parent=".$rs->row["id"]." and shipped<>1";
@@ -181,15 +181,15 @@ while(!$rs->eof)
 		}
 		$ds->movenext();
 	}
-	
+
 	//View publication's folders
 	$dir = opendir ($publication_path);
-  			while ($file = readdir ($dir)) 
+  			while ($file = readdir ($dir))
   			{
 				if($file <> "." && $file <> ".." && $file <> '.DS_Store')
     			{
-					//echo($publication_path."/".$file."<br>");
-					
+					echo($publication_path."/".$file."<br>");
+
 					$width=0;
 					$height=0;
 					if(preg_match("/\.jpg$/i",$file) or preg_match("/\.jpeg$/i",$file))
@@ -198,9 +198,9 @@ while(!$rs->eof)
 						$width=$size[0];
 						$height=$size[1];
 					}
-					
-					if(preg_match("/thumb/i",$file)) 
-					{ 
+
+					if(preg_match("/thumb/i",$file))
+					{
 						$new_filename=$rs->row["id"]."_".$file;
 //						$s3->batch()->create_object($bucket_previews,$new_filename , array(
 //                'fileUpload' => $publication_path."/".$file,
@@ -276,7 +276,7 @@ while(!$rs->eof)
 
 
 //                        $file_upload_response = $s3->batch()->send();
-						
+
 						$message_log.="The file ".$file." has been moved to BackBlaze<br>";
 
                         if ($jsonArray['uploadTimestamp'])
@@ -284,7 +284,7 @@ while(!$rs->eof)
 //							$uri=$s3->get_object_url($bucket_files,$new_filename);
                             $uri="https://f002.backblazeb2.com/file/shamimgraphic/".$new_filename;
 							$url=explode("/".$new_filename,$uri);
-						
+
 							$sql="select id_parent from filestorage_files where id_parent=".$rs->row["id"]." and item_id=0 and filename1='".$file."'";
 							$ds->open($sql);
 							if($ds->eof)
@@ -292,20 +292,33 @@ while(!$rs->eof)
 								$sql="insert into filestorage_files (id_parent,item_id,url,filename1,filename2,filesize,server1,pdelete,width,height) values (".$rs->row["id"].",0,'".$url[0]."','".$file."','".$new_filename."',".filesize($publication_path."/".$file).",".$amazon_server.",0,".$width.",".$height.")";
 								$db->execute($sql);
 							}
+
+							$delete_mass[]=$rs->row["id"];
+							//delete files from the local server
+							for($i=0;$i<count($delete_mass);$i++)
+							{
+								delete_files((int)$delete_mass[$i],false);
+							}
+
 						}
 						else
 						{
 							$storage_flag=false;
 						}
+
+
+
+
 					}
 					else
 					{
+					    echo "not thumb";
 						//Define extention
 						$file_mass=explode(".",$file);
 						$file_extention=$file_mass[count($file_mass)-1];
-						
+
 						$new_filename=$rs->row["id"]."_".md5(create_password().$rs->row["id"].create_password()).".".$file_extention;
-						
+
 //						$s3->batch()->create_object($bucket_files,$new_filename , array(
 //                'fileUpload' => $publication_path."/".$file,
 //                'acl' => AmazonS3::ACL_PUBLIC,
@@ -384,16 +397,16 @@ while(!$rs->eof)
 
 
 //						$file_upload_response = $s3->batch()->send();
-						
+
 						if ($jsonArray['uploadTimestamp'])
         				{
 //							$uri=$s3->get_object_url($bucket_files,$new_filename);
 							$uri="https://f002.backblazeb2.com/file/shamimgraphic/".$new_filename;
 							$url=explode("/".$new_filename,$uri);
-							
+
 							$message_log.="The file ".$file." has been moved to Amazon S3<br>";
-						
-						
+
+
 							if(isset($items_mass[$file]))
 							{
 								$sql="select id_parent from filestorage_files where id_parent=".$rs->row["id"]." and item_id=".$items_mass[$file];
@@ -409,6 +422,16 @@ while(!$rs->eof)
 									$db->execute($sql);
 								}
 							}
+
+
+
+							$delete_mass[]=$rs->row["id"];
+							//delete files from the local server
+							for($i=0;$i<count($delete_mass);$i++)
+							{
+								delete_files((int)$delete_mass[$i],false);
+							}
+
 						}
 						else
 						{
@@ -418,11 +441,11 @@ while(!$rs->eof)
     			}
  			 }
   			closedir ($dir);
-	
+
 	unset($items_mass);
-	
-	$delete_mass[]=$rs->row["id"];
-	
+
+
+
 	if($storage_flag==true)
 	{
 		if($rs->row["module_table"]==30)
@@ -445,29 +468,25 @@ while(!$rs->eof)
 			$sql="update vector set server2=".$amazon_server." where id_parent=".$rs->row["id"];
 			$db->execute($sql);
 		}
-		
+
 		$message_log.="The publication ID = ".$rs->row["id"]." has been moved to the amazon server.<br>";
 	}
 	else
 	{
 		$message_log.="Error. The publication ID = ".$rs->row["id"]." wasn't moved to the amazon server.<br>";
 	}
-	
+
 	//Logs
 	$sql="insert into filestorage_logs (publication_id,logs,data) values (".$rs->row["id"].",'".$message_log."',".date_default_timezone_set('America/Los_Angeles').")";
 	$db->execute($sql);
 	//echo($message_log);
-	
-	
+
+
 	$rs->movenext();
 }
 
 
-//delete files from the local server
-for($i=0;$i<count($delete_mass);$i++)
-{
-	delete_files((int)$delete_mass[$i],false);
-}
+
 
 
 //Delete removed files from the clouds server

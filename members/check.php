@@ -11,10 +11,10 @@
 
 
 
-				
-				
+
+
 				/////////////////////////////////////
- 
+
 
 
 	$username = $_POST['l'];
@@ -30,17 +30,17 @@
 	    $check_error = 1;
 	}
 
-		 
+
 
                 $pass_coded = md5($password);
 
-			 
-	 
 
-				
-				
-				
-			
+
+
+
+
+
+
 
 
 
@@ -54,10 +54,10 @@ $rs->open($sql);
 	{
 	$sql="delete from users_login_failed where data<".(mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"))-3600);
 	$db->execute($sql);
-	
+
 	$sql="delete from users_access where data<".(mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"))-3600);
 	$db->execute($sql);
-	
+
 	$sql="select ip from users_ip_blocked where ip='".result($_SERVER["REMOTE_ADDR"])."'";
 	$dn->open($sql);
 		if($dn->eof)
@@ -76,56 +76,57 @@ $rs->open($sql);
 
 				$_SESSION["people_id"]=$rs->row[ "id_parent" ];
 				$_SESSION["people_name"]=$rs->row[ "name" ];
+				$_SESSION["people_last_name"]=$rs->row[ "last_name" ];
 				$_SESSION["people_login"]=$rs->row[ "login" ];
 				$_SESSION["people_email"]=$rs->row[ "email" ];
 				$_SESSION["people_category"]=$rs->row[ "category" ];
 				$_SESSION["people_active"]=$id;
 				$_SESSION["people_type"]=$rs->row["utype"];
-				$_SESSION["people_exam"]=$rs->row["examination"];	
+				$_SESSION["people_exam"]=$rs->row["examination"];
 				$_SESSION['print_user'] = 'ok';
 				$_SESSION['print_username'] = $rs->row[ "login" ];
-				
-				
+
+
 				///////////////////////////////////
 				setcookie("people_login",$rs->row["login"],time()+60*60*24*30,"/",str_replace("http://","",surl));
 				setcookie("people_password",md5($rs->row["password"]),time()+60*60*24*30,"/",str_replace("http://","",surl));
-				
-				
-				
-							
-							
-				
+
+
+
+
+
+
 			//	if($_SESSION["people_type"]=="buyer" or $_SESSION["people_type"]=="common")
 			//	{
-					
-					
+
+
 				//		header("location:profile_home.php");
 				//		exit();
-					
+
 			//	}
 			//	if($_SESSION["people_type"]=="seller" or $_SESSION["people_type"]=="affiliate")
 			//	{
 				//	header("location:profile_home.php");
 				//	exit();
 		//		}
-		
-		
+
+
 		if(isset($_SERVER["HTTP_REFERER"]) and preg_match("/checkout/i",$_SERVER["HTTP_REFERER"]))
 					{
 						header("location:checkout.php");
 						exit();
 					}	else{
-						
+
 					    	header("Location: ../users/index.php");
 							die();
 					}
-					
-					
-					
-					
-					
-					
-					
+
+
+
+
+
+
+
 			}
 			else
 			{
