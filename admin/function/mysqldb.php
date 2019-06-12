@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 function sql_input ($input) {
 
@@ -47,7 +47,7 @@ class TMySQLConnection
   var $user = dbuser;
   var $password = dbpassword;
   var $dbname = dbname;
-  var $error; 
+  var $error;
   var $debug = true;
 
   function connect()
@@ -58,10 +58,10 @@ class TMySQLConnection
       $this->password = func_get_arg( 2 );
     }
     $this->connection = mysql_connect( $this->host, $this->user, $this->password );
- 
+
   }
   function execute()
-  { 
+  {
 global $nnnn;
 global $time_mysql;
 
@@ -76,7 +76,7 @@ global $time_mysql;
     if( $this->debug ) { /*debug( $db . ":\n" . $query );*/ }
     mysql_select_db( $db );
     $result = mysql_query( sql_input($query) );
-    $this->error=mysql_error(); 
+    $this->error=mysql_error();
     if( $result ) {
       return $result;
     }
@@ -92,14 +92,14 @@ global $time_mysql;
 //------------------------------------------------------------------------------
 class TMySQLQuery
 {
-  var $connection; 
+  var $connection;
   var $result;
   var $row;
   var $trow;                  //����� ��� ����������
-  var $eof;        
+  var $eof;
   var $addnew;
-  var $source; 
-  var $rc;    
+  var $source;
+  var $rc;
 
   //�������������
   function TMySQLQuery()
@@ -109,7 +109,7 @@ class TMySQLQuery
   //���������� �������, ������ ����������� � ������������� connction
   function open( $query )
   {
-  
+
   if(!isset($_SESSION["query_count"]))
   {
   		$_SESSION["query_count"]=1;
@@ -119,7 +119,7 @@ class TMySQLQuery
   		$_SESSION["query_count"]++;
   }
   //echo("<!--".$_SESSION["query_count"].". ".$query."-->\n");
-  
+
     $this->result = $this->connection->execute( $query );
     $this->movenext();
   }
@@ -139,7 +139,7 @@ $this->row[$rkey]=stripslashes(sql_out($rvalue));
       $this->eof = true;
     }
     $this->trow = $this->row;
-    $this->rc=@mysql_num_rows($this->result); 
+    $this->rc=@mysql_num_rows($this->result);
   }
   //����������
   function addnew()
@@ -211,7 +211,7 @@ function table_isset($t_base)
     		for ($i = 0; $i < mysql_num_rows($t_result); $i++)
 		{
 		if($t_base==mysql_tablename($t_result, $i)){$flag=true;}
-		}	
+		}
 		return $flag;
 	}
  	@mysql_free_result($t_result);
@@ -232,7 +232,7 @@ function table_column_isset($t_table,$t_column)
     		for ($i = 0; $i < mysql_num_rows($t_result); $i++)
 		{
 		if($t_column==mysql_tablename($t_result, $i)){$flag=true;}
-		}	
+		}
 		return $flag;
 	}
  	@mysql_free_result($t_result);

@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_epay_account!=""){
 
@@ -40,10 +40,10 @@ if(isset($_GET["mode"]) and $_GET["mode"]=="notification")
    			$data = base64_decode($ENCODED);
     		$lines_arr = split("\n", $data);
     		$info_data = '';
-    
-    		foreach ($lines_arr as $line) 
+
+    		foreach ($lines_arr as $line)
     		{
-    			if (preg_match("/^INVOICE=(\d+):STATUS=(PAID|DENIED|EXPIRED)(:PAY_TIME=(\d+):STAN=(\d+):BCODE=([0-9a-zA-Z]+))?$/", $line, $regs)) 
+    			if (preg_match("/^INVOICE=(\d+):STATUS=(PAID|DENIED|EXPIRED)(:PAY_TIME=(\d+):STAN=(\d+):BCODE=([0-9a-zA-Z]+))?$/", $line, $regs))
     			{
 					$invoice  = $regs[1];
             		$status   = $regs[2];
@@ -52,11 +52,11 @@ if(isset($_GET["mode"]) and $_GET["mode"]=="notification")
             		$bcode    = $regs[6]; # XXX if PAID
 
 					$info_data .= "INVOICE=$invoice:STATUS=OK\n";
-					
+
 				}
 			}
 			echo $info_data, "\n";
-			
+
 			if(isset($invoice) and $status == 'PAID')
 			{
 
@@ -94,12 +94,12 @@ if(isset($_GET["mode"]) and $_GET["mode"]=="notification")
 						send_notification('neworder_to_user',$product_id);
 						send_notification('neworder_to_admin',$product_id);
 					}
-			}		
-    		
+			}
+
 		}
 		else
 		{
-			echo "ERR=Not valid CHECKSUM\n"; 
+			echo "ERR=Not valid CHECKSUM\n";
 		}
 	}
 }

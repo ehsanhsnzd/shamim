@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <form method="post" action="secpay_change.php">
 <?

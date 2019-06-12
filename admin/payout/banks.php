@@ -3,7 +3,7 @@
 admin_panel_access("settings_payout");
 
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <form method="post" action="banks_add.php" style="margin:5px 0px 15px 6px">
 <input name="new" type="text" value="" style="width:200px">&nbsp;<input type="submit" value="<?=word_lang("add")?>" class="btn">

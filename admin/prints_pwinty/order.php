@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_pwinty");
 
-if(!defined("site_root")){exit();}
+
 
 
 
@@ -293,7 +293,7 @@ while(!$rs->eof)
 	$flag_prints=false;
 	$content="";
 	$total=0;
-	
+
 	$sql="select item,price,quantity,option1_id,option1_value,option2_id,option2_value,option3_id,option3_value from orders_content where prints=1 and id_parent=".$rs->row["id"];
 	$ds->open($sql);
 	while(!$ds->eof)
@@ -303,9 +303,9 @@ while(!$rs->eof)
 		if(!$dr->eof and in_array($dr->row["printsid"],$prints_mas))
 		{
 			$flag_prints=true;
-			
+
 			$content.="<div style='margin-bottom:3px'><a href='../catalog/content.php?id=".$dr->row["itemid"]."'>#".$dr->row["itemid"]."</a> &mdash; ".$ds->row["quantity"]." x ".$dr->row["title"]."<span class='gr'>(";
-			
+
 			for($i=1;$i<4;$i++)
 			{
 				if($ds->row["option".$i."_id"]!=0 and $ds->row["option".$i."_value"]!="")
@@ -318,24 +318,24 @@ while(!$rs->eof)
 					}
 				}
 			}
-			
+
 			$content.=")</span></div>";
-			
+
 			$total+=$ds->row["price"]*$ds->row["quantity"];
 		}
-		
+
 		$ds->movenext();
 	}
-	
+
 	if($flag_prints)
 	{
 		?>
 		<tr <?if($tr%2==0){echo("class='snd'");}?> valign="top">
-		
+
 			<td><input type="checkbox" name="sel<?=$rs->row["id"]?>" id="sel<?=$rs->row["id"]?>"></td>
-			
+
 			<td class="big"><div class="link_order"><a href="../orders/order_content.php?id=<?=$rs->row["id"]?>"><b><?=word_lang("order")?> #<?=$rs->row["id"]?></b></a></div></td>
-			
+
 			<td class="gray"><?=date(date_format,$rs->row["data"])?></td>
 
 			<td>
@@ -350,11 +350,11 @@ while(!$rs->eof)
 				}
 				?>
 			</td>
-			
+
 			<td><?=$content?></td>
-			
+
 			<td><b><?=currency(1);?><?=float_opt($total,2)?> <?=currency(2);?></b></td>
-			
+
 			<td>
 				<?
 				$sql="select data,pwinty_id from pwinty_orders where order_id=".$rs->row["id"];
@@ -362,7 +362,7 @@ while(!$rs->eof)
 				if(!$ds->eof)
 				{
 					echo("<div class='gray'><b>".word_lang("date").":</b> ".date(date_format,$ds->row["data"])."</div>");
-					
+
 					echo("<div class='gray'><b>Pwinty order ID:</b> ".$ds->row["pwinty_id"]."</div>");
 				}
 				else

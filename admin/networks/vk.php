@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_networks");
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 <p>
 To enable Vkontakte authorization you should do the next:
 </p>

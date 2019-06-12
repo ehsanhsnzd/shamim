@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>Please set the following URL on the eNPS manager as a responce URL:<br> 
 <a href="<?=surl?><?=site_root?>/members/payments_process.php?mode=notification&product_type=order&processor=enets"><?=surl?><?=site_root?>/members/payments_process.php?mode=notification&product_type=order&processor=enets</a></p>

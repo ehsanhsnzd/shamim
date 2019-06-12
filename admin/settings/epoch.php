@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 
@@ -10,7 +10,7 @@
 
 
 <ul>
-<li>Epoch may be used only for <b>subscription or credits</b> payments. 
+<li>Epoch may be used only for <b>subscription or credits</b> payments.
 <li>You should create Products in Epoch merchant member area for each  your subscription and credits plans.
 
 

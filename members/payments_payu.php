@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_payu_account!="")
 {

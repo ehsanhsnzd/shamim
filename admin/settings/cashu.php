@@ -1,6 +1,6 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
-<p>Login into CashU as a merchant,<br> 
+<p>Login into CashU as a merchant,<br>
 go to  "Encryption Information" section and set <b>thanx_url:</b><br>
 <b><?=surl.site_root."/members/payments_process.php?mode=notification&processor=cashu"?></b>.
 </p>

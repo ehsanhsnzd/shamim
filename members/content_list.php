@@ -1,12 +1,12 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 include("content_list_vars.php");
 ?>
 <style>
 /*New styles for the previews. It overwrites style.css file.*/
-.item_list 
-{ 
+.item_list
+{
 	width: <?=($global_settings["thumb_width"]+20)?>px;
 }
 
@@ -82,10 +82,10 @@ $vars_author=build_variables("author","");
 $vars_lightbox=build_variables("lightbox","");
 
 //End. Default variables.
-?> 
+?>
 
-	 
-  
+
+
 <?=$search_middle?>
 <div class="search_header_mobile visible-phone"></div>
 <div id="search_header">
@@ -279,12 +279,12 @@ if($autopaging==1)
 	str=2;
 	flag_auto=true;
 	res=" ";
-	
+
 	function auto_paging(page)
 	{
 
 		str=page;
-	
+
     	var req = new JsHttpRequest();
    		 // Code automatically called on load finishing.
     	req.onreadystatechange = function() {
@@ -308,13 +308,13 @@ if($autopaging==1)
 			$('#flow_body').masonry({
   			itemSelector: '.home_box'
 			});
-		
+
 			$('#flow_body').masonry('reload') ;
 		<?
 		}
 		?>
-		
-		
+
+
 		$('.home_preview').each(function(){
 
 
@@ -326,7 +326,7 @@ if($autopaging==1)
     		$(this).stop().animate({opacity:'1.0'},300);
     		});
 
-    		
+
     		$(".hb_cart").mouseover(function(){
      			$(this).stop().animate({ opacity: 1}, 600);
 
@@ -335,7 +335,7 @@ if($autopaging==1)
     		$(".hb_cart").mouseout(function(){
     			$(this).stop().animate({ opacity: 0.5}, 600);
     		});
-    		
+
     		$(".hb_cart2").mouseover(function(){
      			$(this).stop().animate({ opacity: 1}, 600);
     		});
@@ -343,8 +343,8 @@ if($autopaging==1)
     		$(".hb_cart2").mouseout(function(){
     			$(this).stop().animate({ opacity: 0.5}, 600);
     		});
- 		
-    		
+
+
     		 $(".hb_lightbox").mouseover(function(){
      			$(this).stop().animate({ opacity: 1}, 600);
     		});
@@ -352,7 +352,7 @@ if($autopaging==1)
     		$(".hb_lightbox").mouseout(function(){
     			$(this).stop().animate({ opacity: 0.5}, 600);
     		});
-    		
+
     		 $(".hb_free").mouseover(function(){
      			$(this).stop().animate({ opacity: 1}, 600);
     		});
@@ -360,7 +360,7 @@ if($autopaging==1)
     		$(".hb_free").mouseout(function(){
     			$(this).stop().animate({ opacity: 0.5}, 600);
     		});
-        
+
 
 		});
 
@@ -372,11 +372,11 @@ if($autopaging==1)
     str++;
 
 	}
-	
-	
+
+
 	$(document).ready(function(){
 		$(window).scroll(function(){
-			if($(document).height() - $(window).height() - $(window).scrollTop() <150) 
+			if($(document).height() - $(window).height() - $(window).scrollTop() <150)
     		{
     			if(flag_auto)
     			{

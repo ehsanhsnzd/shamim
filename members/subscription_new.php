@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?include("payments_settings.php");?>
 <form method="post" action="billing.php?type=subscription">
 <table border="0" cellpadding="0" cellspacing="0"   class="profile_table" width="100%">

@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 $box_languages="";
 
 $box_languages_lite="<script>function lopen(){\$('#languages_lite2').slideDown('slow');}function lclose(){\$('#languages_lite2').slideUp('slow');}</script><div id='languages_lite'><a href='javascript:lopen();'>".$lang_name[$lng]."</a><span>&nbsp;</span></div><div id='languages_lite2'><a href='javascript:lclose();'><img src='".site_root."/".$site_template_url."images/close.png' class='close'></a><ul>";
@@ -8,7 +8,7 @@ $box_languages_lite2="<div id='languages_lite'><a href='#' class='lanbox'>".$lan
 
 
 
-foreach ($_SESSION["site_lng"] as $key => $value) 
+foreach ($_SESSION["site_lng"] as $key => $value)
 {
 	$lt="";
 	$sel="selected";
@@ -23,7 +23,7 @@ foreach ($_SESSION["site_lng"] as $key => $value)
 	$box_languages.="<option value='".$key."' ".$sel.">".$key."</option>";
 
 	$box_languages_lite.="<li><a href='".site_root."/members/language.php?lang=".$key."'><img src='".site_root."/admin/images/languages/".$lng3.$lt.".gif'>".$key."</a></li>";
-	
+
 	$box_languages_lite2.="<li><a href='".site_root."/members/language.php?lang=".$key."'><img src='".site_root."/admin/images/languages/".$lng3.$lt.".gif'>".$key."</a></li>";
 }
 

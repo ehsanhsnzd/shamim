@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://epay.kkb.kz/"><b>Epay.kkb.kz</b></a> is a payments provider of Kazakhstan.</p>
 

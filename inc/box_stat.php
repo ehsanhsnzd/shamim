@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 $box_stat="";
 
 $stat_id="stat|".$lng."|".$site_template_id.$global_settings["allow_photo"].$global_settings["allow_video"].$global_settings["allow_audio"].$global_settings["allow_vector"];
@@ -84,7 +84,7 @@ if (!$smarty->is_cached('stat.tpl',$stat_id))
 	$boxcontent=str_replace("{VD}",strval($vt),$boxcontent);
 
 
-	
+
 	$boxcontent=format_layout($boxcontent,"sitephoto",$global_settings["allow_photo"]);
 	$boxcontent=format_layout($boxcontent,"sitevideo",$global_settings["allow_video"]);
 	$boxcontent=format_layout($boxcontent,"siteaudio",$global_settings["allow_audio"]);
@@ -101,7 +101,7 @@ if (!$smarty->is_cached('stat.tpl',$stat_id))
 	$boxcontent=str_replace("{WORD_VIEWED}",word_lang("viewed"),$boxcontent);
 	$box_stat=$boxcontent;
 	$box_stat=translate_text($box_stat);
-	
+
 }
 
 $smarty->cache_lifetime = 3600*$site_cache_stats;

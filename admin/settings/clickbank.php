@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 
@@ -14,7 +14,7 @@
 
 
 <ul>
-<li>Clickbank may be used only for <b>subscription or credits</b> payments because you must add all products in your account on clickbank.com first. 
+<li>Clickbank may be used only for <b>subscription or credits</b> payments because you must add all products in your account on clickbank.com first.
 
 
 
@@ -24,7 +24,7 @@
 <li>Choose  <b>Account Settings -> My Products</b> and create the same <b>subscription and credits types</b> as you have in photo video store admin panel.
 
 
-<li>Go to <b>Account Settings -> My Site</b> and set:<br> 
+<li>Go to <b>Account Settings -> My Site</b> and set:<br>
     <b>Secret Key:</b><br>
     <br>
     <b>Instant Notification URL:</b><br>

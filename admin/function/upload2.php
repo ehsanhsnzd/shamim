@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 
 
@@ -205,14 +205,14 @@ return $res;
 function duration_form($data,$field)
 {
 	$res="";
-	
+
 	$res.="<table border='0' cellpadding='0' cellspacing='0'><tr>";
 	$res.="<td nowrap><select name='".$field."_hour' style='width:50px' class='ibox'>";
-	
+
 	$form_hours=floor($data/3600);
 	$form_minutes=floor(($data-$form_hours*3600)/60);
 	$form_seconds=$data-$form_hours*3600-$form_minutes*60;
-	
+
 	for($j=0;$j<100;$j++)
 	{
 		if($j<10){$ji="0".$j;}
@@ -308,7 +308,7 @@ $res="";
 					{
 						$readonly="";
 					}
-		
+
 					$res.="</td>
 					<td><input name='price".$rs->row["id_parent"]."' value='".float_opt($rs->row["price"],2)."' type='text' style='width:60px' ".$readonly." class='ibox'></td>
 					</tr>";
@@ -578,7 +578,7 @@ $res.="</table>";
 
 return $res;
 }
-//End audio upload form 
+//End audio upload form
 
 
 
@@ -685,7 +685,7 @@ $res.="</table>";
 
 return $res;
 }
-//End vector upload form 
+//End vector upload form
 
 
 
@@ -811,7 +811,7 @@ $res.="</tr>";
 				$res.="<tr>
 				<td><input name='".$type."_chk".$ds->row["id_parent"]."' type='checkbox' checked></td>
 				<td nowrap>".$ds->row["title"];
-				
+
 				$readonly="readonly";
 				if(isset($_SESSION["entry_admin"]) or $global_settings["seller_prices"])
 				{
@@ -820,7 +820,7 @@ $res.="</tr>";
 
 				$res.="</td>
 				<td><input name='".$type."_price".$ds->row["id_parent"]."' value='".float_opt($dd->row["price"],2)."' type='text' style='width:70px' ".$readonly." class='ibox'></td>";
-				
+
 				if($type!="photo")
 				{
 					$res.="<td>";
@@ -835,7 +835,7 @@ $res.="</tr>";
 					$remote_filesize=0;
 					$flag_storage=false;
 					$remote_file="";
-					
+
 					$sql="select url,filename1,filename2,width,height,item_id,filesize from filestorage_files where id_parent=".(int)$id." and filename1='".$dd->row["url"]."'";
 					$dn->open($sql);
 					if(!$dn->eof)
@@ -844,10 +844,10 @@ $res.="</tr>";
 						$remote_filesize=$dn->row["filesize"];
 						$remote_file=$dn->row["url"]."/".$dn->row["filename2"];
 					}
-					
-					
-					
-					
+
+
+
+
 					if(!$flag_storage)
 					{
 						$url=site_root.$site_servers[$server1]."/".(int)$id."/".$dd->row["url"];
@@ -878,7 +878,7 @@ $res.="</tr>";
 						}
 					}
 				}
-				
+
 				if($type!="photo")
 				{
 					$res.="</td>";
@@ -894,13 +894,13 @@ $res.="</tr>";
 						}
 					}
 				}
-				
-				
-				
-				
-				
-				
-				
+
+
+
+
+
+
+
 				$res.="</tr>";
 			}
 			else
@@ -910,7 +910,7 @@ $res.="</tr>";
 					$res.="<tr>
 								<td><input name='".$type."_chk".$ds->row["id_parent"]."' type='checkbox'></td>
 								<td nowrap>".$ds->row["title"]."</td><td><input name='".$type."_price".$ds->row["id_parent"]."' value='".float_opt($ds->row["price"],2)."' type='text' style='width:70px'  class='ibox'></td>";
-					
+
 					if($type!="photo")
 					{
 						if($ds->row["shipped"]!=1)
@@ -921,8 +921,8 @@ $res.="</tr>";
 						{
 							$res.="<td>".word_lang("shipped")."</td><td></td>";
 						}
-					}			
-								
+					}
+
 					$res.="</tr>";
 
 				}
@@ -932,14 +932,14 @@ $res.="</tr>";
 		}
 	$dr->movenext();
 	}
-	
+
 
 if($type=="video" and isset($_SESSION['entry_admin']))
 {
 	if($site_ffmpeg==false)
 	{
 		$res.="<tr><th colspan=6><b>".word_lang("preview")." ".word_lang("video").":</b></th></tr><tr><td colspan='6'><input class='ibox' name='preview' type='file' style='width:400px'><span class='smalltext'>(*.flv,*.wmv. ,*.mp4,*.mov. ".word_lang("size")." < ".$lpreviewvideo."Mb.)</span></td></tr>";
-	
+
 		$res.="<tr><th colspan=6><b>".word_lang("preview")." ".word_lang("photo").":</th></tr><tr><td colspan='6'><input class='ibox' name='preview2' type='file' style='width:400px'><br><span class='smalltext'>(*.jpg,*.jpeg)</span></td></tr>";
 	}
 	else
@@ -1033,7 +1033,7 @@ if($type=="vector"){$table_name="vector_types";}
 				{
 					$sql="delete from items where id_parent=".(int)$id." and price_id=".$ds->row["id_parent"];
 					$db->execute($sql);
-				
+
 					if($dd->row["shipped"]!=1)
 					{
 						if($type!="photo")
@@ -1048,7 +1048,7 @@ if($type=="vector"){$table_name="vector_types";}
 				}
 			}
 			else
-			{	
+			{
 				if(isset($_SESSION['entry_admin']))
 				{
 					if($type=="photo")
@@ -1092,11 +1092,11 @@ $photo_file="";
 		if(!$dp->eof)
 		{
 				$dir = opendir ($_SERVER["DOCUMENT_ROOT"].site_root.server_url($dp->row["server1"])."/".$id);
-  				while ($file = readdir ($dir)) 
+  				while ($file = readdir ($dir))
  				{
     				if($file <> "." && $file <> ".." && $file <> ".DS_Store")
     				{
-						if(preg_match("/.jpg$|.jpeg$/i",$file) and !preg_match("/thumb/",$file) and !preg_match("/photo_[0-9]+/",$file)) 
+						if(preg_match("/.jpg$|.jpeg$/i",$file) and !preg_match("/thumb/",$file) and !preg_match("/photo_[0-9]+/",$file))
 						{
 							$photo_file=$file;
 						}
@@ -1145,7 +1145,7 @@ while(!$ds->eof)
 			{
 				$snd="class='snd'";
 			}
-			
+
 			$res.="<tr ".$snd.">
 			<td><input name='prints_chk".$ds->row["id_parent"]."' type='checkbox' checked></td>
 			<td>".$ds->row["title"]."</td>
@@ -1211,7 +1211,7 @@ $price=$dr->row["price"];
 		{
 			$readonly="";
 		}
-		
+
 		$snd="";
 		if($tr%2==0)
 		{
@@ -1326,7 +1326,7 @@ if($id!=0 and isset($_SESSION['entry_admin']))
 }
 
 if(isset($_SERVER["HTTP_REFERER"]) and $_SERVER["HTTP_REFERER"]!="")
-{	
+{
 	$return_url=$_SERVER["HTTP_REFERER"];
 }
 else
@@ -1340,12 +1340,12 @@ for($i=0;$i<count($admin_fields);$i++)
 {
 	$form_result.="<div class='admin_field'>";
 	$form_result.="<span>".word_lang($admin_names[$i]).":</span>";
-	
+
 	if($admin_types[$i]=="text")
 	{
 		$form_result.="<input type='text' name='".$admin_fields[$i]."' style='width:400px' class='ibox' value='".$admin_meanings[$i]."'>";
 	}
-	
+
 	if($admin_types[$i]=="filepdf")
 	{
 		$form_result.="<input type='file' name='".$admin_fields[$i]."' style='width:400px' class='ibox'><br>(*.jpg or *.pdf or *.zip)";
@@ -1354,13 +1354,13 @@ for($i=0;$i<count($admin_fields);$i++)
 			$form_result.="<div style='padding-top:3px'><a 	href='".$admin_meanings[$i]."'>".word_lang("download")."</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='delete_thumb.php?id=".$id."&type=file'>".word_lang("delete")."</a></div>";
 		}
 	}
-	
+
 	if($admin_types[$i]=="file")
 	{
 		if($type=="category")
 		{
 			$form_result.="<input type='file' name='".$admin_fields[$i]."' style='width:400px' class='ibox'><br>(*.jpg)";
-			
+
 
 			if($admin_meanings[$i].""!="")
 			{
@@ -1368,7 +1368,7 @@ for($i=0;$i<count($admin_fields);$i++)
 			}
 		}
 		if($type=="photo")
-		{	
+		{
 			if($id==0)
 			{
 				$form_result.=$border_header.photo_upload_form().$border_footer;
@@ -1391,7 +1391,7 @@ for($i=0;$i<count($admin_fields);$i++)
 				}
 			}
 		}
-		
+
 		if($type=="video")
 		{
 			if($id==0)
@@ -1403,7 +1403,7 @@ for($i=0;$i<count($admin_fields);$i++)
 				$form_result.=$border_header.price_update_form($id,"video").$border_footer;
 			}
 		}
-		
+
 		if($type=="audio")
 		{
 			if($id==0)
@@ -1415,7 +1415,7 @@ for($i=0;$i<count($admin_fields);$i++)
 				$form_result.=$border_header.price_update_form($id,"audio").$border_footer;
 			}
 		}
-		
+
 		if($type=="vector")
 		{
 			if($id==0)
@@ -1427,41 +1427,41 @@ for($i=0;$i<count($admin_fields);$i++)
 				$form_result.=$border_header.price_update_form($id,"vector").$border_footer;
 			}
 		}
-		
+
 	}
-	
+
 	if($admin_types[$i]=="int")
 	{
 		$form_result.="<input type='text' name='".$admin_fields[$i]."' style='width:200px' class='ibox' value='".$admin_meanings[$i]."'>";
 	}
-	
+
 	if($admin_types[$i]=="float")
 	{
 		$form_result.="<input type='text' name='".$admin_fields[$i]."' style='width:200px' class='ibox' value='".$admin_meanings[$i]."'>";
 	}
-	
+
 	if($admin_types[$i]=="textarea")
 	{
 		$form_result.="<textarea name='".$admin_fields[$i]."' style='width:400px;height:200px' class='ibox'>".$admin_meanings[$i]."</textarea>";
 	}
-	
+
 	if($admin_types[$i]=="data")
 	{
 		$form_result.=admin_date($admin_meanings[$i],$admin_fields[$i]);
 	}
-	
+
 	if($admin_types[$i]=="checkbox")
 	{
 		$sel="";
 		if($admin_meanings[$i]==1){$sel="checked";}
 		$form_result.="<input type='checkbox' name='".$admin_fields[$i]."'   ".$sel.">";
 	}
-	
+
 	if($admin_types[$i]=="category")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'><option value='5'></option>".$admin_meanings[$i]."</select>";
 	}
-	
+
 	if($admin_types[$i]=="model")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'><option value='0'></option>";
@@ -1476,7 +1476,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="author")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1491,7 +1491,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="content_type")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1506,7 +1506,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="format")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1521,7 +1521,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="ratio")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1536,7 +1536,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="rendering")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1551,7 +1551,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="frames")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1566,7 +1566,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="source")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1581,7 +1581,7 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="track_format")
 	{
 		$form_result.="<select name='".$admin_fields[$i]."' style='width:400px' class='ibox'>";
@@ -1596,18 +1596,18 @@ for($i=0;$i<count($admin_fields);$i++)
 		}
 		$form_result.="</select>";
 	}
-	
+
 	if($admin_types[$i]=="color")
 	{
 		$form_result.=color_set($admin_meanings[$i]);
 	}
-	
+
 	if($admin_types[$i]=="duration")
 	{
 		$form_result.=duration_form($admin_meanings[$i],$admin_fields[$i]);
 	}
-	
-	
+
+
 	if($admin_types[$i]=="editor")
 	{
 		$form_result.="<script type='text/javascript' src='../plugins/tiny_mce/tiny_mce.js'></script>
@@ -1652,7 +1652,7 @@ for($i=0;$i<count($admin_fields);$i++)
 	<textarea name='".$admin_fields[$i]."' style='width:800px;height:600px'>".$admin_meanings[$i]."</textarea>
 	";
 	}
-	
+
 	$form_result.="</div>";
 }
 
@@ -1736,7 +1736,7 @@ $flag_new=false;
 if($id==0)
 {
 		$flag_new=true;
-		
+
 		$sql="insert into structure (id_parent,name,module_table) values (".(int)$_POST["category"].",'".result($_POST["title"])."',34)";
 		$db->execute($sql);
 
@@ -1752,8 +1752,8 @@ if($id==0)
 //Upload photo
 $photo="";
 $swait=false;
-$flag=true;	
-	
+$flag=true;
+
 if(preg_match("/text/i",$_FILES["photo"]["type"]))
 {
 	$flag=false;
@@ -1787,32 +1787,32 @@ if($_FILES["photo"]['size']>0 and $_FILES["photo"]['size']<10048*1024)
 	{
 	//Add a new category
 
-	
+
 		$sql="insert into category (id_parent,title,description,photo,upload,userid,published,priority,password) values (".$id.",'".result($_POST["title"])."','".result($_POST["description"])."','".$photo."',".$category_upload.",".(int)$userid.",".$category_published.",".$category_priority.",'".result($_POST["password"])."')";
 		$db->execute($sql);
-	
-	
+
+
 	}
 	else
 	{
 	//Update the category
-	
+
 		$com="";
 		if($userid!=0)
 		{
 		$com=" and userid=".(int)$userid;
 		}
-	
+
 		$sql="update category set title='".result($_POST["title"])."',description='".result($_POST["description"])."',password='".result($_POST["password"])."',priority=".$category_priority.",upload=".$category_upload.",published=".$category_published." where id_parent=".$id.$com;
 		$db->execute($sql);
-		
+
 		if($photo!="")
 		{
 		$sql="update category set photo='".result($photo)."' where id_parent=".$id.$com;
 		$db->execute($sql);
 		}
-		
-	
+
+
 		$sql="update structure set name='".result($_POST["title"])."',id_parent=".(int)$_POST["category"]." where id=".$id;
 		$db->execute($sql);
 
@@ -1872,9 +1872,9 @@ function model_upload($id)
 	global $_SERVER;
 	global $site_thumb_width;
 	global $db;
-	
+
 	$swait=false;
-	
+
 	//upload photo
 	$_FILES["modelphoto"]['name']=result_file($_FILES["modelphoto"]['name']);
 	$nf=explode(".",$_FILES["modelphoto"]['name']);
@@ -1891,7 +1891,7 @@ function model_upload($id)
 		{
 			if($size[0]<$size[1]){$wd1=$size[0]*$site_thumb_height/$size[1];}
 		}
-	
+
 		easyResize($_SERVER["DOCUMENT_ROOT"].$photo,$_SERVER["DOCUMENT_ROOT"].$photo,100,$wd1);
 
 		$sql="update models set modelphoto='".$photo."' where id_parent=".$id;
@@ -1910,7 +1910,7 @@ function model_upload($id)
 		$sql="update models set model='".$photo."' where id_parent=".$id;
 		$db->execute($sql);
 	}
-	
+
 	return $swait;
 }
 //End. The function uploads model property release
@@ -1921,7 +1921,7 @@ function model_delete($id,$user)
 {
 	global $db;
 	global $rs;
-	
+
 	if($user=="")
 	{
 		$sql="select * from models where id_parent=".(int)$id;
@@ -2020,12 +2020,12 @@ mkdir($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["color"]))
 	{
 		$pub_vars["color"]='';
 	}
-	
+
 	if(isset($_POST["adult"]))
 	{
 		$pub_vars["adult"]=1;
@@ -2125,7 +2125,7 @@ global $db;
 
 //The function defines google gps coordinates
 
-function getGps($exifCoord, $hemi) 
+function getGps($exifCoord, $hemi)
 {
     $degrees = count($exifCoord) > 0 ? gps2Num($exifCoord[0]) : 0;
     $minutes = count($exifCoord) > 1 ? gps2Num($exifCoord[1]) : 0;
@@ -2137,7 +2137,7 @@ function getGps($exifCoord, $hemi)
 
 }
 
-function gps2Num($coordPart) 
+function gps2Num($coordPart)
 {
     $parts = explode('/', $coordPart);
 
@@ -2168,7 +2168,7 @@ if(isset ($info["APP13"]))
 	{
 		$sql="update photos set title='".result($iptc["2#005"][0])."' where id_parent=".$id;
 		$db->execute($sql);
-		
+
 		$sql="update vector set title='".result($iptc["2#005"][0])."' where id_parent=".$id;
 		$db->execute($sql);
 
@@ -2181,7 +2181,7 @@ if(isset ($info["APP13"]))
 	{
 		$sql="update photos set description='".result($iptc["2#120"][0])."' where id_parent=".$id;
 		$db->execute($sql);
-		
+
 		$sql="update vector set description='".result($iptc["2#120"][0])."' where id_parent=".$id;
 		$db->execute($sql);
 	}
@@ -2199,7 +2199,7 @@ if(isset ($info["APP13"]))
 		{
 			$sql="update photos set keywords='".result($iptc_kw)."' where id_parent=".$id;
 			$db->execute($sql);
-			
+
 			$sql="update vector set keywords='".result($iptc_kw)."' where id_parent=".$id;
 			$db->execute($sql);
 		}
@@ -2213,7 +2213,7 @@ if(isset ($info["APP13"]))
 	{
 		$lon = getGps($exif_info["GPS"]["GPSLongitude"], $exif_info["GPS"]['GPSLongitudeRef']);
 		$lat = getGps($exif_info["GPS"]["GPSLatitude"], $exif_info["GPS"]['GPSLatitudeRef']);
-		
+
 		$sql="update photos set google_x=".$lat.",google_y=".$lon." where id_parent=".$id;
 		$db->execute($sql);
 	}
@@ -2256,7 +2256,7 @@ global $db;
 			$sql="insert into prints_items (title,price,itemid,priority,printsid) values ('".$rs->row["title"]."',".$price.",".$id.",".$rs->row["priority"].",".$rs->row["id_parent"].")";
 			$db->execute($sql);
 		}
-		
+
 		$rs->movenext();
 	}
 }
@@ -2303,7 +2303,7 @@ mkdir($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["adult"]))
 	{
 		$pub_vars["adult"]=0;
@@ -2344,12 +2344,12 @@ global $db;
 	{
 		$com="  and (userid=".$pub_vars["userid"]." or author='".$pub_vars["author"]."')";
 	}
-	
+
 	if(!isset($pub_vars["featured"]))
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["adult"]))
 	{
 		$pub_vars["adult"]=0;
@@ -2401,7 +2401,7 @@ while(!$ds->eof)
 		$uphoto=explode(",",str_replace(" ","",$ds->row["types"]));
 		$_FILES["video_sale".$ds->row["id_parent"]]['name']=result_file($_FILES["video_sale".$ds->row["id_parent"]]['name']);
 		$nf=explode(".",$_FILES["video_sale".$ds->row["id_parent"]]['name']);
-		
+
 		for($i=0;$i<count($uphoto);$i++)
 		{
 			if(strtolower($uphoto[$i])==strtolower($nf[count($nf)-1]))
@@ -2409,7 +2409,7 @@ while(!$ds->eof)
 			$flag=true;
 			}
 		}
-		
+
 		if(preg_match("/text/i",$_FILES["video_sale".$ds->row["id_parent"]]['type']))
 		{
 			$flag=false;
@@ -2421,7 +2421,7 @@ while(!$ds->eof)
 			{
 				$videopath=site_root.$site_servers[$server_id]."/".$folder."/".$_FILES["video_sale".$ds->row["id_parent"]]['name'];
 				move_uploaded_file($_FILES["video_sale".$ds->row["id_parent"]]['tmp_name'],$_SERVER["DOCUMENT_ROOT"].$videopath);
-				
+
 				$swait=true;
 
 
@@ -2444,7 +2444,7 @@ while(!$ds->eof)
 	{
 		if(isset($_POST["video_chk".$ds->row["id_parent"]]))
 		{
-		
+
 			$sql="select id,id_parent,url,name,price from items where id_parent=".$id." and price_id=".$ds->row["id_parent"];
 			$rs->open($sql);
 			if($rs->eof)
@@ -2481,7 +2481,7 @@ if($site_ffmpeg==false)
 			{
 				$vp=site_root.$site_servers[$server_id]."/".$folder."/thumb.".$nf[count($nf)-1];
 				move_uploaded_file($_FILES["preview"]['tmp_name'],$_SERVER["DOCUMENT_ROOT"].$vp);
-			
+
 				$swait=true;
 			}
 		}
@@ -2500,11 +2500,11 @@ if($site_ffmpeg==false)
 			if($_FILES["preview2"]['size']>0 and $_FILES["preview2"]['size']<2048*1024)
 			{
 				$vp=site_root.$site_servers[$server_id]."/".$folder."/thumb.".$nf[count($nf)-1];
-				
+
 				$vp_big=site_root.$site_servers[$server_id]."/".$folder."/thumb100.".$nf[count($nf)-1];
 				move_uploaded_file($_FILES["preview2"]['tmp_name'],$_SERVER["DOCUMENT_ROOT"].$vp);
 				copy($_SERVER["DOCUMENT_ROOT"].$vp,$_SERVER["DOCUMENT_ROOT"].$vp_big);
-				
+
 				photo_resize($_SERVER["DOCUMENT_ROOT"].$vp,$_SERVER["DOCUMENT_ROOT"].$vp,1);
 				photo_resize($_SERVER["DOCUMENT_ROOT"].$vp_big,$_SERVER["DOCUMENT_ROOT"].$vp_big,2);
 
@@ -2539,12 +2539,12 @@ else
 
 	$ds->movenext();
 	}
-	
+
 	if($generation_file=="")
 	{
 		$generation_file=$generation_file2;
 	}
-	
+
 	if($generation_file!="")
 	{
 		$fln=generate_flv($generation_file,0,0);
@@ -2602,7 +2602,7 @@ mkdir($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["adult"]))
 	{
 		$pub_vars["adult"]=0;
@@ -2650,7 +2650,7 @@ global $db;
 	{
 		$com="  and (userid=".$pub_vars["userid"]." or author='".$pub_vars["author"]."')";
 	}
-	
+
 	if(!isset($pub_vars["featured"]))
 	{
 		$pub_vars["featured"]=0;
@@ -2808,10 +2808,10 @@ $nf=explode(".",$_FILES["preview2"]['name']);
 		{
 		$vp=site_root.$site_servers[$server_id]."/".$folder."/thumb.".$nf[count($nf)-1];
 		$vp_big=site_root.$site_servers[$server_id]."/".$folder."/thumb100.".$nf[count($nf)-1];
-		
+
 		move_uploaded_file($_FILES["preview2"]['tmp_name'],$_SERVER["DOCUMENT_ROOT"].$vp);
 		copy($_SERVER["DOCUMENT_ROOT"].$vp,$_SERVER["DOCUMENT_ROOT"].$vp_big);
-		
+
 		photo_resize($_SERVER["DOCUMENT_ROOT"].$vp,$_SERVER["DOCUMENT_ROOT"].$vp,1);
 		photo_resize($_SERVER["DOCUMENT_ROOT"].$vp_big,$_SERVER["DOCUMENT_ROOT"].$vp_big,2);
 
@@ -2860,7 +2860,7 @@ mkdir($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["adult"]))
 	{
 		$pub_vars["adult"]=0;
@@ -2890,7 +2890,7 @@ return $id;
 function publication_vector_update($id,$userid)
 {
 global $site_servers;
-global $site_server_activ;	
+global $site_server_activ;
 global $pub_vars;
 global $dr;
 global $db;
@@ -2914,12 +2914,12 @@ mkdir($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".
 	{
 		$com="  and (userid=".$pub_vars["userid"]." or author='".$pub_vars["author"]."')";
 	}
-	
+
 	if(!isset($pub_vars["featured"]))
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["adult"]))
 	{
 		$pub_vars["adult"]=0;
@@ -2960,17 +2960,17 @@ global $db;
 	{
 		$com="  and (userid=".$pub_vars["userid"]." or author='".$pub_vars["author"]."')";
 	}
-	
+
 	if(!isset($pub_vars["featured"]))
 	{
 		$pub_vars["featured"]=0;
 	}
-	
+
 	if(!isset($pub_vars["color"]))
 	{
 		$pub_vars["color"]="";
 	}
-	
+
 	if(isset($_POST["editorial"]))
 	{
 		$pub_vars["editorial"]=1;
@@ -2979,7 +2979,7 @@ global $db;
 	{
 		$pub_vars["editorial"]=0;
 	}
-	
+
 	if(isset($_POST["adult"]))
 	{
 		$pub_vars["adult"]=1;
@@ -3017,17 +3017,17 @@ global $folder;
 $vp=$zarc;
 
 		$archive = new PclZip($_SERVER["DOCUMENT_ROOT"].$vp);
-		if ($archive->extract(PCLZIP_OPT_PATH,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder) == true) 
+		if ($archive->extract(PCLZIP_OPT_PATH,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder) == true)
 		{
 			$afiles=array();
 
   			$dir = opendir ($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder);
-  			while ($file = readdir ($dir)) 
+  			while ($file = readdir ($dir))
   			{
 				if($file <> "." && $file <> "..")
     			{
-					if (preg_match("/.jpg$|.jpeg$/i",$file) and !preg_match("/thumb/i",$file)) 
-					{ 
+					if (preg_match("/.jpg$|.jpeg$/i",$file) and !preg_match("/thumb/i",$file))
+					{
 						$file=result_file($file);
 						$afiles[count($afiles)]=$file;
 					}
@@ -3035,7 +3035,7 @@ $vp=$zarc;
 					{
 						@unlink($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/".$file);
 					}
-					if (preg_match("/php/i",$file)) 
+					if (preg_match("/php/i",$file))
 					{
 						@unlink($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/".$file);
 					}
@@ -3045,7 +3045,7 @@ $vp=$zarc;
 			@unlink($_SERVER["DOCUMENT_ROOT"].$vp);
 
 			sort ($afiles);
-			reset ($afiles);	
+			reset ($afiles);
 
 			for($n=0;$n<count($afiles);$n++)
 			{
@@ -3053,11 +3053,11 @@ $vp=$zarc;
 
 				photo_resize($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/".$file,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/thumbs".$n.".jpg",1);
 				photo_resize($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/".$file,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/thumbz".$n.".jpg",2);
-				
+
 				publication_watermark_add(0,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/thumbz".$n.".jpg");
 
 				if($n==0)
-				{				
+				{
 					photo_resize($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/".$file,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/thumb1.jpg",1);
 					photo_resize($_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/".$file,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/thumb2.jpg",2);
 					publication_watermark_add(0,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$site_server_activ]."/".$folder."/thumb2.jpg");
@@ -3185,11 +3185,11 @@ if(isset($_FILES["preview2"]['name']))
 			publication_watermark_add($id,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$server_id]."/".$folder."/thumb2.jpg");
 
 			//publication_iptc_add($id,$_SERVER["DOCUMENT_ROOT"].$vp);
-			
+
 			copy($_SERVER["DOCUMENT_ROOT"].$vp,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$server_id]."/".$folder."/thumb_original.jpg");
-	
+
 			@unlink($_SERVER["DOCUMENT_ROOT"].$vp);
-		
+
 		}
 	}
 //End. Upload photo preview and reads IPTC
@@ -3225,12 +3225,12 @@ while(!$ds->eof)
 		$uphoto=explode(",",str_replace(" ","",$ds->row["types"]));
 		$_FILES["vector_sale".$ds->row["id_parent"]]['name']=result_file($_FILES["vector_sale".$ds->row["id_parent"]]['name']);
 		$nf=explode(".",$_FILES["vector_sale".$ds->row["id_parent"]]['name']);
-		
+
 		for($i=0;$i<count($uphoto);$i++)
 		{
 			if(strtolower($uphoto[$i])==strtolower($nf[count($nf)-1])){$flag=true;}
 		}
-		
+
 		if(preg_match("/text/i",$_FILES["vector_sale".$ds->row["id_parent"]]['type']))
 		{
 			$flag=false;
@@ -3317,8 +3317,8 @@ $photo="";
 $_FILES["photo"]['name']=result_file($_FILES["photo"]['name']);
 
 
-$flag=true;	
-	
+$flag=true;
+
 if(preg_match("/text/i",$_FILES["photo"]["type"]))
 {
 	$flag=false;
@@ -3335,11 +3335,11 @@ if($_FILES["photo"]["size"]>0)
 	{
 		$photo=site_root.$site_servers[$server_id]."/".$folder."/".$_FILES["photo"]['name'];
 		move_uploaded_file($_FILES["photo"]['tmp_name'],$_SERVER["DOCUMENT_ROOT"].$photo);
-		
+
 		//If reupload
 		$sql="update items set url='".$_FILES["photo"]['name']."' where id_parent=".$id;
 		$db->execute($sql);
-		
+
 		$swait=true;
 	}
 }
@@ -3355,7 +3355,7 @@ if($photo!="")
 	{
 	publication_iptc_add($id,$_SERVER["DOCUMENT_ROOT"].$photo);
 	}
-	
+
 	//Create thumbs
 	photo_resize($_SERVER["DOCUMENT_ROOT"].$photo,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$server_id]."/".$folder."/thumb1.jpg",1);
 
@@ -3363,7 +3363,7 @@ if($photo!="")
 
 	publication_watermark_add($id,$_SERVER["DOCUMENT_ROOT"].site_root.$site_servers[$server_id]."/".$folder."/thumb2.jpg");
 
-	
+
 }
 
 }
@@ -3394,47 +3394,47 @@ $sql="select id,module_table from structure where id_parent=".$t_id;
 $dp->open($sql);
 	while(!$dp->eof)
 	{
-	
+
 		if($dp->row["module_table"]==34)
 		{
 			$res_id[]=$dp->row["id"];
 			$res_module[]=$dp->row["module_table"];
 			$res_category++;
 		}
-		
+
 		if($dp->row["module_table"]==30)
 		{
 			$res_id[]=$dp->row["id"];
 			$res_module[]=$dp->row["module_table"];
 			$res_photo++;
 		}
-		
+
 		if($dp->row["module_table"]==31)
 		{
 			$res_id[]=$dp->row["id"];
 			$res_module[]=$dp->row["module_table"];
 			$res_video++;
 		}
-		
+
 		if($dp->row["module_table"]==52)
 		{
 			$res_id[]=$dp->row["id"];
 			$res_module[]=$dp->row["module_table"];
 			$res_audio++;
 		}
-		
+
 		if($dp->row["module_table"]==53)
 		{
 			$res_id[]=$dp->row["id"];
 			$res_module[]=$dp->row["module_table"];
 			$res_vector++;
 		}
-	
+
 		if($nlimit<10000)
 		{
 			get_included_publications($dp->row["id"]);
 		}
-		
+
 		$nlimit++;
 		$dp->movenext();
 	}

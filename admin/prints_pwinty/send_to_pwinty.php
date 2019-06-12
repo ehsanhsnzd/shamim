@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 //Define necessary prints ids
 $prints_mas=array();

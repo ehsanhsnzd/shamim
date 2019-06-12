@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_networks");
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>
 1) To enable instagram authorization you should  add <b>a new application</b> here:<br>

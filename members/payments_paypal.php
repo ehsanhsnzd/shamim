@@ -1,5 +1,5 @@
 ﻿<?
-if(!defined("site_root")){exit();}
+
 require_once("../users/lib/nusoap.php");
 
 require ('../config.php');
@@ -235,4 +235,3 @@ require ('../config.php');
         
   
         
- 

@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <div class="table_t2"><div class="table_b"><div class="table_l"><div class="table_r"><div class="table_bl"><div class="table_br"><div class="table_tl"><div class="table_tr">
 <table border="0" cellpadding="3" cellspacing="1" class="table_admin" width="100%">
 <tr>

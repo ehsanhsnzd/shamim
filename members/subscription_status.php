@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <?
 $sql="select title,user,data1,data2,bandwidth,bandwidth_limit,subscription,approved,id_parent from subscription_list where user='".result($_SESSION["people_login"])."' order by data2 desc";

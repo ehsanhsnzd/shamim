@@ -3,7 +3,7 @@
 admin_panel_access("settings_payout");
 
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 

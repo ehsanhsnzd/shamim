@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_ffmpeg");
 
-if(!defined("site_root")){exit();}
+
 ?>
 <?
 if(!isset($_GET["p"]))

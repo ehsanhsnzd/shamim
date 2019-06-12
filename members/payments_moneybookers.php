@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?php
 if($site_moneybookers_account!="") {
     if(isset($_GET["mode"]) and $_GET["mode"]=="notification")

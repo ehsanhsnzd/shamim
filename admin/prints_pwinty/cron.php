@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_pwinty");
 
-if(!defined("site_root")){exit();}
+
 ?>
 
 <p>The new prints orders are not sent to Pwinty service automatically. You have 2 ways to place them:</p>
@@ -13,7 +13,7 @@ if(!defined("site_root")){exit();}
 </ul>
 
 <p>
-You can find the cron script here: 
+You can find the cron script here:
 <b><?=site_root?>/members/cron_pwinty.php</b>
 </p>
 

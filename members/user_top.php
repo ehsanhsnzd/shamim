@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <script type="text/javascript" language="JavaScript">
 
 function add_friend(value) {
@@ -45,9 +45,9 @@ if(!$rs->eof)
 
 
 	$boxauthor="";
-	
+
 	$user_name=show_user_name($rs->row["login"]);
-	
+
 	if($rs->row["avatar"]!="" and file_exists($_SERVER["DOCUMENT_ROOT"].$rs->row["avatar"]))
 	{
 		$boxauthor.="<img src='".$rs->row["avatar"]."' align='absMiddle' width='".avatarwidth."' border='0'>&nbsp;".$user_name;
@@ -94,7 +94,7 @@ if(!$rs->eof)
 	$userbox=str_replace("{WORD_MAIL}",word_lang("sitemail to user"),$userbox);
 	$userbox=str_replace("{WORD_TESTIMONIAL}",word_lang("add a testimonial"),$userbox);
 	$userbox=str_replace("{WORD_COMPANY}",word_lang("company"),$userbox);
-	
+
 	$viewed_count=0;
 	$downloaded_count=0;
 

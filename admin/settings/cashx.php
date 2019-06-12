@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>You should login on cashx.com as merchant and go to
 Merchants -> Shopping Cart -> IPN Settings and set:</p>

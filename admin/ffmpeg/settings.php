@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_ffmpeg");
 
-if(!defined("site_root")){exit();}
+
 
 
 $sql="select * from ffmpeg";
@@ -11,7 +11,7 @@ if(!$rs->eof)
 {
 ?>
 <form method="post" action="change.php">
-<div class="form_field"> 
+<div class="form_field">
 	<span><b><?=word_lang("enabled")?>:</b></span>
 	<input name="ffmpeg" type="checkbox" <?if($rs->row["ffmpeg"]==1){echo("checked");}?>>
 </div>

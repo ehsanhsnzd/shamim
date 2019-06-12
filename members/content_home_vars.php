@@ -1,7 +1,7 @@
 <?
-if(!defined("site_root")){exit();}
 
- 
+
+
 
 //Current page
 if(!isset($_REQUEST["str"])){$str=1;}
@@ -146,7 +146,7 @@ setcookie("flow_setting",$flow,time()+60*60*24*30,"/",str_replace("http://","",s
 $flow_vars=build_variables("str","",true,"",true);
 
 
-//Auto paging 
+//Auto paging
 if($global_settings["auto_paging_default"])
 {
 	$autopaging=1;
@@ -163,7 +163,7 @@ if($global_settings["auto_paging"])
 	{
 		$autopaging=(int)$_COOKIE["autopaging_setting"];
 	}
-	
+
 	if(isset($_REQUEST["autopaging"]))
 	{
 		$autopaging=(int)$_REQUEST["autopaging"];
@@ -180,12 +180,12 @@ if($id_parent!=5 and !isset($_REQUEST["acategory"]))
 {
 	//Search all subcategories from the category
 	$itg="";
-	
+
 		$nlimit=0;
 		buildmenu8((int)$id_parent);
-	
-	
-	
+
+
+
 
 	$com2="((a.id_parent=".(int)$id_parent." or b.category2=".(int)$id_parent." or b.category3=".(int)$id_parent.") ".$itg.")";
 }
@@ -203,7 +203,7 @@ if(isset($search) and $search!="")
 }
 
 
-foreach ($_REQUEST as $key => $value) 
+foreach ($_REQUEST as $key => $value)
 {
 	$tt=explode("_",$key);
 	if($tt[0]=="s" and isset($tt[1]))
@@ -231,7 +231,7 @@ if(count($sch)>0)
 	{
 		$com2.=" and ";
 	}
-	
+
 	$com2.="(";
 	$search="";
 	for($i=0;$i<count($sch);$i++)
@@ -239,10 +239,10 @@ if(count($sch)>0)
 		if($i!=0){$com2.=" and ";}
 
 		$com2.=" (b.title rlike '[[:<:]]".$sch[$i]."[[:>:]]' or b.description rlike '[[:<:]]".$sch[$i]."[[:>:]]' or b.keywords rlike '[[:<:]]".$sch[$i]."[[:>:]]') ";
-		
+
 		//Cirillic
 		//$com2.=" (UCASE(b.title) like UCASE('%".$sch[$i]."%') or UCASE(b.description) like UCASE('%".$sch[$i]."%') or UCASE(b.keywords) like UCASE('%".$sch[$i]."%')) ";
-		
+
 		//Old
 		//$com2.=" (b.title like '%".$sch[$i]."%' or b.description like '%".$sch[$i]."%' or b.keywords like '%".$sch[$i]."%') ";
 
@@ -328,7 +328,7 @@ if(isset($_REQUEST["acategory"]) and $_REQUEST["acategory"]!="" and $_REQUEST["a
 {
 	//Search all subcategories from the category
 	$itg="";
-	
+
 	$smart_buildmenu8_id="buildmenu|8|".(int)$_REQUEST["acategory"];
 	if (!$smarty->is_cached('buildmenu8.tpl',$smart_buildmenu8_id))
 	{
@@ -605,7 +605,7 @@ $mass_sort["date"]=word_lang("date");
 $mass_sort["title"]=word_lang("title");
 $mass_sort["rated"]=word_lang("top rated");
 $mass_sort["random"]=word_lang("random");
-foreach ($mass_sort as $key => $value) 
+foreach ($mass_sort as $key => $value)
 {
 	$sel="";
 	if($key==$vd)

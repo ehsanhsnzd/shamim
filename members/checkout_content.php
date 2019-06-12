@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 
@@ -49,7 +49,7 @@ function check_country(value)
     req.send( {country: document.getElementById(value+"_country").value,state:  document.getElementById(value+"_state").value,type:value} );
 }
 
-function check_field(value) 
+function check_field(value)
 {
 
 }
@@ -61,9 +61,9 @@ function change_total(value,value2)
     {
         if (req.readyState == 4)
         {
-			document.getElementById("total_block").innerHTML =req.responseJS.total;	
-			document.getElementById("shipping_block").innerHTML =req.responseJS.shipping;	
-			document.getElementById("taxes_block").innerHTML =req.responseJS.taxes;	
+			document.getElementById("total_block").innerHTML =req.responseJS.total;
+			document.getElementById("shipping_block").innerHTML =req.responseJS.shipping;
+			document.getElementById("taxes_block").innerHTML =req.responseJS.taxes;
         }
     }
     req.open(null, 'checkout_shipping.php', true);
@@ -74,10 +74,10 @@ function change_total(value,value2)
 function check_shipping()
 {
 	flag_shipping=true;
-	
+
 	address_mass=new Array("firstname","lastname","country","city","zip","address");
-	
-	
+
+
 	for(i=0;i<address_mass.length;i++)
 	{
 		if($("#billing_"+address_mass[i]).val()=="")
@@ -89,7 +89,7 @@ function check_shipping()
 		{
 			$("#billing_"+address_mass[i]).removeClass("ibox_error");
 		}
-		
+
 		if($("#thesame2").attr('checked'))
 		{
 			if($("#shipping_"+address_mass[i]).val()=="")
@@ -103,7 +103,7 @@ function check_shipping()
 			}
 		}
 	}
-	
+
 	if(flag_shipping==false)
 	{
 		$(window).scrollTo(300,1000, {axis:'y'} );
@@ -113,7 +113,7 @@ function check_shipping()
 	{
 		$('#order_now').attr('disabled',false);
 	}
-	
+
 	return flag_shipping;
 }
 </script>
@@ -209,7 +209,7 @@ if(!isset($_SESSION["shipping_thesame"]))
 		{
 			$_SESSION["billing_country"]=$rs->row["country"];
 		}
-		
+
 		if(!isset($_SESSION["billing_state"]))
 		{
 			$_SESSION["billing_state"]=$rs->row["state"];
@@ -244,7 +244,7 @@ if(!isset($_SESSION["shipping_thesame"]))
 		{
 			$_SESSION["shipping_country"]=$rs->row["country"];
 		}
-		
+
 		if(!isset($_SESSION["shipping_state"]))
 		{
 			$_SESSION["shipping_state"]=$rs->row["state"];
@@ -260,7 +260,7 @@ while(!$dq->eof)
 	{
 		$items_list.="<div class='checkout_line'></div>";
 	}
-	
+
 	//Download items
 	if($dq->row["item_id"]>0)
 	{
@@ -270,7 +270,7 @@ while(!$dq->eof)
 		{
 			$items_list.="<div class='checkout_list'><a href='".item_url($dr->row["id_parent"])."'><b>#".$dr->row["id_parent"]." &mdash; ".word_lang("file").": ".$dr->row["name"]."</b></a><div style='margin-top:3px'>
 			".$dq->row["quantity"]." x ".currency(1).float_opt($dr->row["price"],2)." ".currency(2)."</div></div>";
-			
+
 			if($dr->row["shipped"]==1)
 			{
 				$weight+=$global_settings["cd_weight"];
@@ -289,7 +289,7 @@ while(!$dq->eof)
 		if(!$dr->eof)
 		{
 			$price=define_prints_price($dr->row["price"],$dq->row["option1_id"],$dq->row["option1_value"],$dq->row["option2_id"],$dq->row["option2_value"],$dq->row["option3_id"],$dq->row["option3_value"]);
-			
+
 
 			$items_list.="<div class='checkout_list'><div><a href='".item_url($dr->row["itemid"])."'><b>#".$dr->row["itemid"]." &mdash; ".word_lang("prints and products").":  ".$dr->row["title"]."</b></a></div>
 			<span class='gr'>";
@@ -321,7 +321,7 @@ while(!$dq->eof)
 			$quantity+=$dq->row["quantity"];
 		}
 	}
-	
+
 	$dq->movenext();
 }
 
@@ -348,7 +348,7 @@ $product_shipping=0;
 $product_shipping_type=0;
 
 $shipping_list="";
-	
+
 if($flag_shipping)
 {
 	$sql="select id,title,shipping_time,methods,methods_calculation,taxes,regions from shipping where activ=1 and weight_min<=".$weight." and weight_max>=".$weight."  order by title";
@@ -356,7 +356,7 @@ if($flag_shipping)
 	while(!$dr->eof)
 	{
 		$shipping=0;
-		
+
 		//Check regions
 		$flag_regions=false;
 		if($dr->row["regions"]==0)
@@ -383,7 +383,7 @@ if($flag_shipping)
 				$ds->movenext();
 			}
 		}
-		
+
 		//Calculate
 		if($flag_regions)
 		{
@@ -403,7 +403,7 @@ if($flag_shipping)
 			{
 				$sql="select price from shipping_ranges where id_parent=".$dr->row["id"];
 			}
-			
+
 			$ds->open($sql);
 			if(!$ds->eof)
 			{
@@ -416,7 +416,7 @@ if($flag_shipping)
 					$shipping=$ds->row["price"];
 				}
 			}
-			
+
 			if($dr->row["taxes"]==1)
 			{
 				$word_taxes=" - ".word_lang("taxable");
@@ -425,7 +425,7 @@ if($flag_shipping)
 			{
 				$word_taxes="";
 			}
-			
+
 			$shipping_list.="<div style='margin-bottom:3px'><input onClick=\"change_total(this.value,".$dr->row["id"].")\" checked name='shipping_type'  type='radio' value='".$shipping."'>".currency(1).float_opt($shipping,2)." ".currency(2)." &mdash; ".$dr->row["title"]." (".$dr->row["shipping_time"].")".$word_taxes."</div>";
 			$product_shipping=$shipping;
 			$product_shipping_type=$dr->row["id"];
@@ -530,8 +530,8 @@ if($site_credits)
 
 
 
-	
-	
+
+
 	//Place order
 if($flag_continue)
 {
@@ -539,19 +539,19 @@ if($flag_continue)
 
 	echo($checkout_header);
 	?>
-	
-	
+
+
 
 <div class="checkoutbox"><?=word_lang("billing and shipping address")?></div>
 <div class="checkoutbox_text">
 
-	
-<form method="post" action="checkout_address.php" style="margin:0px" <?if($flag_shipping){?>onsubmit="return check_shipping();"<?}?>>	
+
+<form method="post" action="checkout_address.php" style="margin:0px" <?if($flag_shipping){?>onsubmit="return check_shipping();"<?}?>>
 	<table border="0" cellpadding="0" cellspacing="0">
 	<tr valign="top">
 	<td>
 		<div id="billing_form" name="billing_form" style="display:block;">
-		
+
 			<div class='login_header'><h2><?=word_lang("billing address")?>:</h2></div>
 
 			<div class="form_field">
@@ -581,7 +581,7 @@ if($flag_continue)
 			?>
 			</select>
 			</div>
-			
+
 			<div class="form_field">
 			<span><?=word_lang("state")?></b></span>
 			<div id="states_billing">
@@ -591,7 +591,7 @@ if($flag_continue)
 				check_country('billing');
 			</script>
 			</div>
-			
+
 			<div class="form_field">
 			<span><?=word_lang("city")?></b></span>
 			<input class="ibox" type="text" name="billing_city" id="billing_city" value="<?=$_SESSION["billing_city"]?>" style="width:300px">
@@ -630,7 +630,7 @@ if($flag_continue)
 			<input class="ibox" type="text" name="shipping_lastname" id="shipping_lastname" value="<?=$_SESSION["shipping_lastname"]?>" style="width:300px">
 			</div>
 
-			
+
 
 			<div class="form_field">
 			<span><?=word_lang("country")?></b></span>
@@ -647,7 +647,7 @@ if($flag_continue)
 			?>
 			</select>
 			</div>
-			
+
 			<div class="form_field">
 			<span><?=word_lang("state")?></b></span>
 			<div id="states_shipping">
@@ -657,7 +657,7 @@ if($flag_continue)
 				check_country('shipping');
 			</script>
 			</div>
-			
+
 			<div class="form_field">
 			<span><?=word_lang("city")?></span>
 			<input class="ibox" type="text" name="shipping_city" type="text" id="shipping_city" value="<?=$_SESSION["shipping_city"]?>" style="width:300px">
@@ -681,13 +681,13 @@ if($flag_continue)
 <?
 if($_SESSION["checkout_steps"]==1)
 {
-	?>		
+	?>
 	<input type="submit" class="isubmit" value="<?=word_lang("next step")?>">
 	<?
 }
 else
 {
-	?>		
+	?>
 	<input type="submit" value="<?=word_lang("change")?>">
 	<?
 }
@@ -754,12 +754,12 @@ if($_SESSION["checkout_steps"]>1)
 			?>
 		}
 		</script>
-		
+
 
 		<?
 		$sel=false;
 
-		foreach ($payments as $key => $value) 
+		foreach ($payments as $key => $value)
 		{
 			$t="site_".strtolower($key)."_account";
 			$tt=$$t;
@@ -811,9 +811,9 @@ if($_SESSION["checkout_steps"]>1)
 		<?
 	}
 	?>
-	
 
-	
+
+
 <input type="submit" id="order_now" class="add_to_cart" value="<?=word_lang("order now")?>">
 </form>
 <?
@@ -854,13 +854,13 @@ echo($checkout_middle);
 		}
 		?>
 		</div>
-		
+
 		<div class="checkoutbox2_bottom">
 			<div id="total_block">
 				<b><?=word_lang("total")?>:</b> <span class="price"><b><?=currency(1).float_opt($product_total,2)." ".currency(2)?></b></span>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
@@ -870,7 +870,7 @@ echo($checkout_middle);
 	</div>
 	<div class="checkoutbox2_text">
 		<?=$items_list?>
-		
+
 		<div class="checkoutbox2_bottom">
 			<a href="shopping_cart.php"><?=word_lang("change")?></a>
 		</div>
@@ -914,7 +914,7 @@ echo($checkout_middle);
 		</div>
 		<?if($flag_shipping){?>
 		<div class="checkout_line"></div>
-		<div class="checkout_list">	
+		<div class="checkout_list">
 			<b><?=word_lang("shipping address")?>:</b><br>
 			<?
 			if($_SESSION["shipping_firstname"]!="" or $_SESSION["shipping_lastname"]!="")
@@ -947,18 +947,18 @@ echo($checkout_middle);
 	</div>
 </div>
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
+
+
+
+
+
+
+
+
+
+
+
 
 	<?
 	echo($checkout_footer);

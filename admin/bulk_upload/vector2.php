@@ -1,5 +1,5 @@
 <?if($_SESSION['entry_admin']!=1){redirect("../auth/");}?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 <?

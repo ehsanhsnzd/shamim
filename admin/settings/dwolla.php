@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://www.dwolla.com/"><b>Dwolla</b></a> is a payments provider. 
 The best way to move money. No percentages. No hidden fees. Just 25 cents per transaction or free for transactions $10 and less.

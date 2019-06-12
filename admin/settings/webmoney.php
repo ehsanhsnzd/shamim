@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>You have to login at Webmoney site, go to 'Settings' section and set the parameters:</p>
 

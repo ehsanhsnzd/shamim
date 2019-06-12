@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_chronopay_account!="")
 {
@@ -45,7 +45,7 @@ if($site_chronopay_account!="")
 						send_notification('neworder_to_admin',$product_id);
 					}
 					
-					echo("200 ÎÊ");
+					echo("200 ï¿½ï¿½");
 			}
 		}
 	}

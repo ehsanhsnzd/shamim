@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 
 //components
@@ -37,6 +37,6 @@ if(isset($box_members))
 }
 
 
- 
+
 
 ?>

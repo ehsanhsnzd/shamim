@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_moneyua_account!="")
 {
@@ -19,12 +19,12 @@ if($site_moneyua_account!="")
 				<PAYMENT_TESTMODE>".$site_moneyua_test."</PAYMENT_TESTMODE>
 				<PAYMENT_CODING>1</PAYMENT_CODING>
 				</MAIN>";
-				
+
 	$strxml= base64_encode(rawurlencode($strxml));
-	
+
 	$hash  = md5($strxml.$site_moneyua_password);
-	
-	
+
+
 	?>
 		<form action="http://money.ua/sale.php" name="process" id="process" method="post">
 			<input type="hidden" name="flagxml" value="1">

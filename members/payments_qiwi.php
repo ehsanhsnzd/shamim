@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_qiwi_account!="")
 {
@@ -16,10 +16,10 @@ if($site_qiwi_account!="")
 
 			preg_match($s[0], $i, $m3);
 			preg_match($s[1], $i, $m4);
-			
+
 			$password = $site_qiwi_code;
 			$hash = strtoupper(md5($m3[1].strtoupper(md5($password))));
-			
+
 			if($hash !== $m2[1])
 			{
 				$resultCode=150;
@@ -27,9 +27,9 @@ if($site_qiwi_account!="")
 			else
 			{
 				$resultCode=0;
-				
+
 				$product_mass=explode("-",$m3[1]);
-				
+
 				$product_id=(int)$product_mass[0];
 				$product_type=$product_mass[1];
 
@@ -72,14 +72,14 @@ if($site_qiwi_account!="")
 							coupons_add(order_user($product_id));
 							send_notification('neworder_to_user',$product_id);
 							send_notification('neworder_to_admin',$product_id);
-						}	
+						}
 					}
 					if($product_type=="payout_seller" or $product_type=="payout_affiliate")
 					{
 						payout_approve((int)$product_id,$product_type);
 					}
 			}
-			
+
 			$text = "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"http://client.ishop.mw.ru/\"><SOAP-ENV:Body><ns1:updateBillResponse><updateBillResult>status</updateBillResult></ns1:updateBillResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>";
 			$text = str_replace('status',$resultCode , $text);
 			header('content-type: text/xml; charset=UTF-8');
@@ -90,17 +90,17 @@ if($site_qiwi_account!="")
 	else
 	{
 		$telephone="";
-		
+
 		if(isset($_POST["telephone"]))
 		{
 			$telephone=result($_POST["telephone"]);
 		}
-		
+
 		if(isset($_GET["telephone"]))
 		{
 			$telephone=result($_GET["telephone"]);
 		}
-	
+
 		?>
 		<form method="post" action="http://w.qiwi.ru/setInetBill_utf.do" name="process" id="process">
 		<input type="hidden" name="from" value="<?=$site_qiwi_account?>" />

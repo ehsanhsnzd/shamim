@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>You should login on epay.bg as merchant and set <b>Notify/Callback URL:</b><br> <?=surl.site_root."/members/payments_process.php?mode=notification&processor=epay"?></p>
 

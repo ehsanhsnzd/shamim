@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 $topmenu="";
 
 $topmenu_id="topmenu|".$lng."|".$site_template_id;

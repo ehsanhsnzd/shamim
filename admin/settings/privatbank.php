@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://privatbank.ua"><b>PrivatBank.ua</b></a> is a payments provider.</p>
 

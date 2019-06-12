@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 
 if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart_lite"]))
@@ -17,7 +17,7 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 	if(!$rs->eof)
 	{
 		$box_shopping_cart="<table border=0 cellpadding=3 cellspacing=1 class='tborder'><tr><td class='theader'><span class='smalltext'><b>ID</b></span></td><td class=theader><span class=smalltext><b>".word_lang("item")."</b></td><td class=theader><span class=smalltext><b>".word_lang("price")."</b></td><td class=theader><span class=smalltext><b>".word_lang("qty")."</b></td></tr>";
-	
+
 		while(!$rs->eof)
 		{
 			if($script_carts!="")
@@ -31,7 +31,7 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 				$script_id.=",";
 				$script_remove.=",";
 				$script_descr.=",";
-				
+
 				$input_carts.="||";
 				$input_photo.="||";
 				$input_title.="||";
@@ -41,7 +41,7 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 				$input_id.="||";
 				$input_remove.="||";
 				$input_descr.="||";
-				 
+
 			}
 			$script_remove.=0;
 			$input_remove.=0;
@@ -63,7 +63,7 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 					$script_photo.="'".show_preview($dr->row["id_parent"],"vector",1,1,$dr->row["server1"],$dr->row["folder"])."'";
 					$input_photo.=show_preview($dr->row["id_parent"],"vector",1,1,$dr->row["server1"],$dr->row["folder"]);
 				}
-		
+
 			if($rs->row["item_id"]>0)
 			{
 				$sql="select id,name,price,id_parent from items where id=".$rs->row["item_id"];
@@ -77,7 +77,7 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 					$script_qty.=$rs->row["quantity"];
 					$script_url.="'".item_url($dr->row["id_parent"])."'";
 					$script_id.=$rs->row["item_id"];
-					
+
 
 					$input_qty.=$rs->row["quantity"];
 					$input_url.=item_url($dr->row["id_parent"]);
@@ -86,7 +86,7 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 					$total+=$dr->row["price"]*$rs->row["quantity"];
 				}
 			}
-		
+
 			if($rs->row["prints_id"]>0)
 			{
 				$sql="select id_parent,title,price,itemid from prints_items where id_parent=".$rs->row["prints_id"];
@@ -108,11 +108,11 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 					$total+=$price*$rs->row["quantity"];
 				}
 			}
-		
+
 			$quantity+=$rs->row["quantity"];
 			$rs->movenext();
 		}
-	
+
 		$box_shopping_cart.="</table><div class=smalltext style='margin-top:5'><b>".word_lang("total").":</b> ".currency(1).float_opt($total,2,true)." ".currency(2)."</div><div style='margin-top:5'><a href='".site_root."/members/shopping_cart.php' class='o'><b>".word_lang("view shopping cart")."</b></a></div>";
 
 		$box_shopping_cart_lite="<a href='".site_root."/members/shopping_cart.php'>".word_lang("shopping cart")."</a> ".$quantity." (".currency(1).float_opt($total,2,true)." ".currency(2).")" ;
@@ -151,13 +151,13 @@ if(!isset($_SESSION["box_shopping_cart"]) or !isset($_SESSION["box_shopping_cart
 <input type='hidden' id='list_cart_content_id' value='".$input_id."'>
 	
 	";
-	
-	 
-	
-	
+
+
+
+
 	$box_shopping_cart.=$script_carts;
 	$box_shopping_cart_lite.=$script_carts;
-	
+
 	$_SESSION["box_shopping_cart"]=$box_shopping_cart;
 	$_SESSION["box_shopping_cart_lite"]=$box_shopping_cart_lite;
 }

@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_storage");
 
-if(!defined("site_root")){exit();}
+
 ?>
 
 <div class="subheader"><?=word_lang("overview")?></div>
@@ -70,7 +70,7 @@ while(!$rs->eof)
 <?
 $dir_amount = -2;
 $dir = opendir ($DOCUMENT_ROOT.$rs->row["url"]);
-while ($file = readdir ($dir)) 
+while ($file = readdir ($dir))
 {
 if(is_dir($DOCUMENT_ROOT.$rs->row["url"]."/".$file))
 {

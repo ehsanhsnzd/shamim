@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><b>PayPrin AxisGwy</b> is a payments provider.</p>
 

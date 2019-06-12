@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 $paging_string="";
 
@@ -29,7 +29,7 @@ $com2="";
 if(isset($_GET["category"]))
 {
 	$paging_string.="&category=".$_GET["category"];
-	
+
 	if($_GET["category"]!=0)
 	{
 		$sql="select title from blog_categories where id_parent=".(int)$_GET["category"];
@@ -80,14 +80,14 @@ if($site=="user_friends")
 
 
 
-//Текущая страница
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if(!isset($_GET["str"])){$str=1;}
 else{$str=(int)$_GET["str"];}
 
-//Количество новостей на странице
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $kolvo=k_str;
 
-//Количество страниц на странице
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $kolvo2=k_str2;
 
 
@@ -138,7 +138,7 @@ while(!$rs->eof)
 					$dn->open($sql);
 					if(!$dn->eof)
 					{
-					
+
 						if($i!=0){echo(" ");}
 						?><a href="<?=site_root?>/blog/<?=$dn->row["id_parent"]?>/<?=user_url($rs->row["user"])?>.html"><?=$cat[$i]?></a><?
 					}
@@ -147,7 +147,7 @@ while(!$rs->eof)
 		}
 		if($rs->row["comments"]==1)
 		{
-			?>&nbsp;|&nbsp;<a href="<?=site_root?>/post/<?=user_url($rs->row["user"])?>/<?=$rs->row["id_parent"]?>.html"><?=word_lang("comments")?>: 
+			?>&nbsp;|&nbsp;<a href="<?=site_root?>/post/<?=user_url($rs->row["user"])?>/<?=$rs->row["id_parent"]?>.html"><?=word_lang("comments")?>:
 			<?
 			$kcount=0;
 			$sql="select count(id_parent) as kcount from blog_comments where postid=".$rs->row["id_parent"]." group by id_parent";

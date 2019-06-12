@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("users_newsletter");
 
-if(!defined("site_root")){exit();}
+
 ?>
 <?
 $sql="select * from newsletter order by data desc";

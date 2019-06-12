@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 <form method="post" action="epassporte_change.php">

@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("users_newsletter");
 
-if(!defined("site_root")){exit();}
+
 ?>
 <p>Here you can fing all user's emails with enabled 'Newsletter' option.</p>
 <?

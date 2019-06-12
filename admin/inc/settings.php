@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 $menu_admin=array();
 $menu_admin_name=array();

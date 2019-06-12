@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://www.zombaio.com"><b>Zombaio.com</b></a> is an Adult Entertainment Industry payments provider.</p>
 

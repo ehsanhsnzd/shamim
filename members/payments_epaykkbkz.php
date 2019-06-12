@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 require_once("../admin/plugins/epaykkbkz/kkb.utils.php");
 $self = $_SERVER['PHP_SELF'];

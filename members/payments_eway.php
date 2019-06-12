@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_eway_account!=""){
 
@@ -17,7 +17,7 @@ if($site_eway_ipn==true)
 if($_POST['ewayTrxnStatus'] == "True")
 {
 
-echo("Ñongratulation! The transaction is successfull.");
+echo("ï¿½ongratulation! The transaction is successfull.");
 
 	$transaction_id=transaction_add("authorize",$_POST["ewayTrxnReference"],$_POST["eWAYoption1"],$_POST["eWAYoption2"]);
 

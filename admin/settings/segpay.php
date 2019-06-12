@@ -1,7 +1,7 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <ul>
-<li>Segpay may be used only for <b>subscription or credits</b> payments. 
+<li>Segpay may be used only for <b>subscription or credits</b> payments.
 <li>You should create Package IDs and Product IDs at https://my.segpay.com/ (Create Packages -> Price Points) for each  your subscription and credits plans.
 
 

@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_worldpay_account!=""){
 if(isset($_GET["mode"]) and $_GET["mode"]=="notification")

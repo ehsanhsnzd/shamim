@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 //Check access
 admin_panel_access("catalog_upload");
@@ -76,7 +76,7 @@ if($table=="photos")
 	$delete_url="2";
 	$edit_url="30";
 	$preview=show_preview($rs->row["id_parent"],"photo",1,1,$rs->row["server1"],$rs->row["folder"]);
-	
+
 
 	//Define if the publication is remote
 	$flag_storage=false;
@@ -92,7 +92,7 @@ if($table=="photos")
 		$remote_filename=$ds->row["filename1"];
 		$flag_storage=true;
 	}
-	
+
 	if(!$flag_storage)
 	{
 		$sql="select id,id_parent,url,price,price_id from items where id_parent=".$rs->row["id_parent"];

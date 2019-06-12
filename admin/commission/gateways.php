@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 
 include($_SERVER["DOCUMENT_ROOT"].site_root."/members/payments_settings.php");
@@ -100,7 +100,7 @@ if($_POST["method"]=="dwolla" and $payout_accounts["dwolla"]!="" and $site_dwoll
 	$token = '';
 	$pin = $site_dwolla_pin;
 
-	
+
 	$Dwolla = new DwollaRestClient();
 	$Dwolla->setToken($token);
 	$transactionId = $Dwolla->send($pin,$payout_accounts["dwolla"],$product_total,'',$product_name);

@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://robokassa.ru/"><b>Robokassa</b></a> is Russian payments provider.</p>
 

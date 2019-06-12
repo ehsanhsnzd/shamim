@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><b>Please notice that <a href="http://www.2checkout.com/">2checkout.com</a> doesn't allow Credits model!</b></p>
 

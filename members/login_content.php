@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <div class="description-section">
     <div class="container">
         <div class="row">

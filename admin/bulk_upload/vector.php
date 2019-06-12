@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("catalog_bulkupload");
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 

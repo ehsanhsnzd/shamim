@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_enets_account!=""){
 
@@ -11,9 +11,9 @@ else
 {
 ?>
 
-<form method="post" action="<?=enets_url?>"  name="process" id="process"> 
-	<input type="hidden" name="txnRef" value="<?=$product_id?>"> 
-	<input type="hidden" name="mid" value="<?=$site_enets_account?>"> 
+<form method="post" action="<?=enets_url?>"  name="process" id="process">
+	<input type="hidden" name="txnRef" value="<?=$product_id?>">
+	<input type="hidden" name="mid" value="<?=$site_enets_account?>">
 	<input type="hidden" name="amount" value="<?=$product_total?>">
 
 </form>

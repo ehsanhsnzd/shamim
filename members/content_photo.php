@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 
 $sql="update photos set viewed=viewed+1 where id_parent=".(int)$id_parent;
@@ -48,8 +48,8 @@ if($site_amazon or $site_rackspace)
 		$flag_storage=true;
 		$ds->movenext();
 	}
-}	
-	
+}
+
 	if(!$flag_storage)
 	{
 		$sql="select url from items where id_parent=".$id_parent;
@@ -66,7 +66,7 @@ if($site_amazon or $site_rackspace)
 			}
 		}
 	}
-	
+
 
 
 
@@ -100,7 +100,7 @@ else
 
 	if(!$flag_storage)
 	{
-		$sz = getimagesize($_SERVER["DOCUMENT_ROOT"].$preview_url2); 
+		$sz = getimagesize($_SERVER["DOCUMENT_ROOT"].$preview_url2);
 		$iframe_width=$sz[0];
 		$iframe_height=$sz[1];
 	}
@@ -345,11 +345,11 @@ else
 						$sizebox_labels_checked="";
 						$flag_license=false;
 					}
-					
+
 					$photo_width=0;
 					$photo_height=0;
 					$photo_filesize=0;
-					
+
 					if(!$flag_storage)
 					{
 						$photo_width=$image_width;
@@ -370,13 +370,13 @@ else
 						$rh=$photo_height;
 						$boxcontent=str_replace("{PHOTO_WIDTH}",$rw,$boxcontent);
 						$boxcontent=str_replace("{PHOTO_HEIGHT}",$rh,$boxcontent);
-						
+
 						$photo_size=strval(float_opt($photo_filesize/(1024*1024),3))." Mb.";
-						
+
 						$boxcontent=str_replace("{PHOTO_SIZE}",$photo_size,$boxcontent);
-						
-						
-						
+
+
+
 						if($dr->row["size"]!=0)
 						{
 							if($rw>$rh)
@@ -402,7 +402,7 @@ else
 							$dpi=$photo_dpi;
 						}
 					}
-					
+
 					if($size_photo=="cm")
 					{
 						$rw=float_opt($rw*2.54/$dpi,1);
@@ -412,7 +412,7 @@ else
 
 
 					$subscription_link="";
-					
+
 					if($ncount==0)
 					{
 						$sizebox_buy_checked="checked";
@@ -421,27 +421,27 @@ else
 					{
 						$sizebox_buy_checked="";
 					}
-					
+
 					$bt="<input type='radio'  id='cart' name='cart' value='".$ds->row["id"]."' ".$sizebox_buy_checked.">";
-					
+
 					if(($photo_width>=$photo_height and $dr->row["size"]<=$photo_width) or ($photo_width<$photo_height and $dr->row["size"]<=$photo_height))
 					{
-						
+
 						$content_price="<td nowrap onClick='xcart(".$ds->row["id"].");'><span class='price'>".currency(1).float_opt($ds->row["price"],2,true)." ".currency(2)."</span></td>";
-						
+
 						if($rs->row["free"]==1)
 						{
 							$content_price="";
 						}
-						
+
 						$inches_string=float_opt($rw/$dpi,1)."&quot;&nbsp;x&nbsp;".float_opt($rh/$dpi,1)."&quot;&nbsp;@&nbsp;".$dpi."&nbsp;dpi";
-						
+
 						//$inches_string=float_opt($rw*2.54/$dpi,1)."cm&nbsp;x&nbsp;".float_opt($rh*2.54/$dpi,1)."cm&nbsp;@&nbsp;".$dpi."&nbsp;dpi";
-						
+
 						$sizeboxes[$dd->row["id_parent"]].="<tr   class='tr_cart' id='tr_cart".$ds->row["id"]."'><td onClick='xcart(".$ds->row["id"].");'>".$ds->row["name"].$subscription_link."</td><td onClick='xcart(".$ds->row["id"].");'><div class='item_pixels'>".$rw."&nbsp;x&nbsp;".$rh."&nbsp;".$size_photo."</div><div class='item_inches' style='display:none'>".$inches_string."</div></td>".$content_price."<td onClick='xcart(".$ds->row["id"].");'>".$bt."</td></tr>";
 					}
 
-				
+
 				$ds->movenext();
 				}
 			$ncount++;
@@ -460,14 +460,14 @@ else
 				{
 					$word_buy=word_lang("download");
 				}
-				
+
 				$text_price="<th>".word_lang("price")."</th>";
 				if($rs->row["free"]==1)
 				{
 					$text_price="";
 				}
-				
-				
+
+
 				$value="<table style='display:none'   border='0' cellpadding='0' cellspacing='0' class='table_cart'><tr valign='top'><th width='30%'>".word_lang("title")."</th><th><a href=\"javascript:show_size('".$key."');\" id='link_size1_".$key."' class='link_pixels'>".word_lang("pixels")."</a>&nbsp;<a href=\"javascript:show_size('".$key."');\" id='link_size2_".$key."' class='link_inches'>".word_lang("inches")."</a></th>".$text_price."<th>".$word_buy."</th></tr>".$value."</table>";
 			}
 			$sizebox.="<div name='p".$key."' id='p".$key."' style='display:".$sizebox_display."'>".$value."</div>";
@@ -487,23 +487,23 @@ else
 		{
 			$prints_display="block";
 		}
-		
+
 		$sql="select id_parent,title,price,printsid from prints_items where itemid=".(int)$id_parent." order by priority";
 		$dr->open($sql);
 		if(!$dr->eof)
 		{
-		
+
 			$prints_label="<input type='radio' name='license' id='prints_label' style='margin-left:20px;margin-right:10px'  onClick='apanel(0);'><label for='prints_label' >".word_lang("prints and products")."</label>";
-		
+
 			$prints_content.="<div name='p0' id='p0' style='display:".$prints_display."'><table border='0' cellpadding='0' cellspacing='0' class='table_cart'><tr valign='top'><th>".word_lang("title")."</th><th>".word_lang("price")."</th><th>".word_lang("buy")."</th></tr>";
 			while(!$dr->eof)
-			{	
+			{
 				$prints_preview="";
 				if(file_exists($_SERVER["DOCUMENT_ROOT"].site_root."/content/prints/product".$dr->row["printsid"]."_1_big.jpg") or file_exists($_SERVER["DOCUMENT_ROOT"].site_root."/content/prints/product".$dr->row["printsid"]."_2_big.jpg") or file_exists($_SERVER["DOCUMENT_ROOT"].site_root."/content/prints/product".$dr->row["printsid"]."_3_big.jpg"))
 				{
 					$prints_preview="<a href='javascript:show_prints_preview(".$dr->row["printsid"].");'>";
 				}
-			
+
 				$prints_content.="<tr class='tr_cart' id='tr_cart".$dr->row["id_parent"]."'><td width='60%' onClick='xprint(".$dr->row["id_parent"].");'>".$prints_preview.$dr->row["title"]."</td><td onClick='xprint(".$dr->row["id_parent"].");' ><span class='price'>".currency(1).float_opt($dr->row["price"],2,true)." ".currency(2)."</span></td><td onClick='xprint(".$dr->row["id_parent"].");'><input type='radio'  id='cartprint' name='cartprint' value='-".$dr->row["id_parent"]."' ".$print_buy_checked."></td></tr>";
 
 				$print_buy_checked="";
@@ -524,7 +524,7 @@ else
 		{
 
 			$sizebox="<div style='margin-bottom:6px;margin-top:15px' class='price_license'><a href='".site_root."/members/license.php'>".word_lang("license").":</a></b> ".$sizebox_labels.$prints_label."</div>".$sizebox.$prints_content;
-		
+
 			if($subscription_item)
 			{
 				$word_cart=word_lang("download");
@@ -532,14 +532,14 @@ else
 				{
 					$word_cart=word_lang("free download");
 				}
-				
+
 				$sizebox.="<input id='item_button_cart' class='add_to_cart' type='button' onclick=\"add_download('photo',".$rs->row["id_parent"].",".$rs->row["server1"].")\" value='".$word_cart."'>";
 			}
 			else
 			{
 			//	$sizebox.="<input id='item_button_cart' class='add_to_cart' type='button' onclick=\"add_cart(0)\" value='".word_lang("add to cart")."'>";
 			}
-		
+
 		}
 
 

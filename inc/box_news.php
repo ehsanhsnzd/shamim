@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 $box_news="";
 $smarty_news_id="news|".$lng."|".$site_template_id;

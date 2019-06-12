@@ -1,4 +1,4 @@
-﻿<?if(!defined("site_root")){exit();}?>
+﻿<??>
 
 <p><a href="http://payu.pl"><b>PayU</b></a> is a payments provider.</p>
 

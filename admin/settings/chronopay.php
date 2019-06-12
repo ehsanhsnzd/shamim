@@ -1,6 +1,6 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
-<p>In the Chronopay client interface please set the <b>Access URL</b> field of the product you will use to the following:<br> 
+<p>In the Chronopay client interface please set the <b>Access URL</b> field of the product you will use to the following:<br>
 <a href="<?=surl?><?=site_root?>/members/payments_process.php?mode=notification&product_type=order&processor=chronopay"><?=surl?><?=site_root?>/members/payments_process.php?mode=notification&product_type=order&processor=chronopay</a></p>
 
 

@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 
 
@@ -28,16 +28,16 @@ if(!isset($_SESSION['people_id']))
 	if(userupload and $site_signup==2 and !$site_common_account)
 	{
 		$flag_seller=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"seller",$flag_seller);
-	
+
 	$flag_affiliate=false;
 	if($site_affiliate and $site_signup==2 and !$site_common_account)
 	{
 		$flag_affiliate=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"affiliate",$flag_affiliate);
-	
+
 	$social_result=get_social_networks();
 	$boxcontent=str_replace("{SOCIAL_NETWORKS}",$social_result["vertical"],$boxcontent);
 	$boxcontent=str_replace("{SOCIAL_NETWORKS_HORIZONTAL}",$social_result["horizontal"],$boxcontent);
@@ -47,7 +47,7 @@ if(!isset($_SESSION['people_id']))
 else
 {
 	$boxcontent=file_get_contents($DOCUMENT_ROOT."/".$site_template_url."box_members_profile.tpl");
-	
+
 	$boxcontent=str_replace("{WORD_USERNAME}",$_SESSION["people_login"],$boxcontent);
 
 
@@ -55,39 +55,39 @@ else
 	if(($site_credits and $_SESSION["people_type"]=="buyer") or $_SESSION["people_type"]=="seller" or $_SESSION["people_type"]=="affiliate")
 	{
 		$flag_credits=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"credits",$flag_credits);
-	
-	
+
+
 	$flag_seller=false;
 	if($_SESSION["people_type"]=="seller")
 	{
 		$flag_seller=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"seller",$flag_seller);
-	
-	
+
+
 	$flag_affiliate=false;
 	if($_SESSION["people_type"]=="affiliate")
 	{
 		$flag_affiliate=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"affiliate",$flag_affiliate);
-	
+
 
 	$flag_subscription=false;
 	if($site_subscription==true and $site_credits==true and $_SESSION["people_type"]=="buyer")
 	{
 		$flag_subscription=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"subscription",$flag_subscription);
-	
-	
+
+
 	$flag_buyer=false;
 	if($_SESSION["people_type"]=="buyer")
 	{
 		$flag_buyer=true;
-	}	
+	}
 	$boxcontent=format_layout($boxcontent,"buyer",$flag_buyer);
 
 
@@ -109,8 +109,8 @@ else
 		}
 		$boxcontent=str_replace("profile.php","profile_home.php",$boxcontent);
 	}
-	
-	
+
+
 	if($_SESSION["people_type"]=="seller")
 	{
 		$commission_balance=0;
@@ -130,11 +130,11 @@ else
 		$boxcontent=str_replace("{BALANCE}",currency(1,false).strval(float_opt($commission_balance,2))." ".currency(2,false),$boxcontent);
 		$boxcontent=str_replace("{WORD_BALANCE}",word_lang("commission"),$boxcontent);
 		$boxcontent=str_replace("profile.php","profile_home.php",$boxcontent);
-		
+
 	}
-	
-	
-	
+
+
+
 	if($_SESSION["people_type"]=="affiliate")
 	{
 		$commission_balance=0;
@@ -153,7 +153,7 @@ else
 		}
 		$boxcontent=str_replace("{BALANCE}",currency(1,false).strval(float_opt($commission_balance,2))." ".currency(2,false),$boxcontent);
 		$boxcontent=str_replace("{WORD_BALANCE}",word_lang("commission"),$boxcontent);
-		
+
 		$boxcontent=str_replace("profile.php","profile_home.php",$boxcontent);
 	}
 

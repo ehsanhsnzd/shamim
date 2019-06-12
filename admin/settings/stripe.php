@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://stripe.com"><b>Stripe</b></a> is a payments provider.</p>
 

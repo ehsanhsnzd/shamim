@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>Please login into LinkPoint Connect Admin and go to <b>Customization -> Settings</b>.</p> 
 

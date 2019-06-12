@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>
 You should login in your QIWI account at <a href="http://ishop.qiwi.ru/"><b>ishop.qiwi.ru</b></a> and enable <b>HTTP</b> and <b>SOAP</b> protocols.

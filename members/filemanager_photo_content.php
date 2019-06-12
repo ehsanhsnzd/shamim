@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <table border="0" cellpadding="0" cellspacing="2" align="right">
 <tr height="15">

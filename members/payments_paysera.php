@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 require_once('../admin/plugins/paysera/WebToPay.php');
 

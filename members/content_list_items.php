@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 $flag_empty=false;
 $search_content="";

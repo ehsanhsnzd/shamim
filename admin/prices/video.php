@@ -3,7 +3,7 @@
 admin_panel_access("settings_prices");
 
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 <p><b>Add new video type:</b></p>

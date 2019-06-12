@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/MIT
  */
  
-if(!defined("site_root")){exit();}
+
 
 class UploadHandler
 {

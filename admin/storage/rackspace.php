@@ -1,6 +1,6 @@
 <?
 
-if(!defined("site_root")){exit();}
+
 
 //Check access
 admin_panel_access("settings_storage");
@@ -21,8 +21,8 @@ All files are stored on the <b>local server first</b> and then they are moved<br
 <p>The script creates in your Rackspace account <b>2 containers:</b></p>
 
 <p>
-<b>[PREFIX]_files</b> - for the files.<br> 
-<b>[PREFIX]_previews</b> - for the previews. 
+<b>[PREFIX]_files</b> - for the files.<br>
+<b>[PREFIX]_previews</b> - for the previews.
 </p>
 
 <p>From time to time you can change the prefix to organize your file archive better.</p>

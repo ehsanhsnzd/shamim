@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>You should login on <a href="http://www.payza.com/">www.payza.com</a> (former Alertpay) as merchant and go to
 Merchants -> Business Tools -> IPN -> IPN Setup and set:</p>

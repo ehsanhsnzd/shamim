@@ -1,11 +1,11 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_robokassa_account!="")
 {
 
 // 1.
 // Оплата заданной суммы с выбором валюты на сайте мерчанта
-// Payment of the set sum with a choice of currency on merchant site 
+// Payment of the set sum with a choice of currency on merchant site
 
 // регистрационная информация (логин, пароль #1)
 // registration info (login, password #1)

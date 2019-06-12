@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 function build_variables($var_default,$var_default2,$show_phpfile=true,$var_default3='',$ajax=false)
 {

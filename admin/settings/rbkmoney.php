@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://rbkmoney.ru/"><b>RBK Money</b></a> is Russian payments provider.</p>
 

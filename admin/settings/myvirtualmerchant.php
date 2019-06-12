@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>You should login in your account at <a href="http://www.myvirtualmerchant.com/"><b>myvirtualmerchant.com</b></a> and fill in the settings:</p>
 <br>

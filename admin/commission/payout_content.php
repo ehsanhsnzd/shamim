@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 <h1><?=word_lang("refund")?></h1>

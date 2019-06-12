@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 ?>
 
 
@@ -57,13 +57,13 @@ if($site_amazon or $site_rackspace)
 				$remote_thumb_height=$ds->row["height"];
 			}
 		}
-		
+
 		$flag_storage=true;
 		$ds->movenext();
 	}
-}	
-	
-	
+}
+
+
 
 
 
@@ -191,13 +191,13 @@ if(!$flag_storage)
 
 
 $dir = opendir ($DOCUMENT_ROOT.server_url($rs->row["server1"])."/".$folder);
-while ($file = readdir ($dir)) 
+while ($file = readdir ($dir))
 {
 	if($file <> "." && $file <> "..")
 	{
-		if(preg_match("/thumbs[0-9]+/",$file)) 
+		if(preg_match("/thumbs[0-9]+/",$file))
 		{
-			if(preg_match("/.jpg$|.jpeg$|.png$|.gif$/i",$file)) 
+			if(preg_match("/.jpg$|.jpeg$|.png$|.gif$/i",$file))
 			{
 				$kk=explode("thumbs",$file);
 				if(count($kk)>1)
@@ -229,9 +229,9 @@ for($k=1;$k<count($afiles);$k++)
 
 		$preview_items.="<td align='center'>".$thumbz_link."<img src='".site_root.server_url($rs->row["server1"])."/".$folder."/".$file."' border='0'></a></td>";
 		if($k%4==0){$preview_items.="</tr><tr>";}
-		
+
 		$preview_items2.="<img src=\"".site_root.server_url($rs->row["server1"])."/".$folder."/".$thumbz."\">";
-			
+
 	}
 }
 
@@ -241,11 +241,11 @@ for($k=1;$k<count($afiles);$k++)
 }
 else
 {
-	foreach ($remote_previews as $key => $value) 
+	foreach ($remote_previews as $key => $value)
 	{
-		if(preg_match("/thumbs[0-9]+/",$key)) 
+		if(preg_match("/thumbs[0-9]+/",$key))
 		{
-			if(preg_match("/.jpg$|.jpeg$|.png$|.gif$/i",$key)) 
+			if(preg_match("/.jpg$|.jpeg$|.png$|.gif$/i",$key))
 			{
 				$kk=explode("thumbs",$key);
 				if(count($kk)>1)
@@ -255,8 +255,8 @@ else
 			}
 		}
 	}
-	
-	
+
+
 	for($k=1;$k<count($afiles);$k++)
 	{
 	if(isset($afiles[$k]))
@@ -271,15 +271,15 @@ else
 
 		$preview_items.="<td align='center'>".$thumbz_link."<img src='".$remote_previews[$file]."' border='0'></a></td>";
 		if($k%4==0){$preview_items.="</tr><tr>";}
-		
+
 		$preview_items2.="<img src='".$remote_previews[$thumbz]."'>";
-		
+
 	}
 	}
-	
-	
-	
-	
+
+
+
+
 }
 
 
@@ -305,8 +305,8 @@ $boxcontent=str_replace("{PREVIEW_ITEMS}",$preview_items,$boxcontent);
 		$flag_previews=true;
 	}
 	$boxcontent=format_layout($boxcontent,"vector_previews",$flag_previews);
-	
-	
+
+
 	if($preview_items2!="")
 	{
 		$preview_items2="<style>#galleria{height:320px;width:".$global_settings["thumb_width2"]."px}</style><div id='galleria'>".$preview_items2."</div><script> Galleria.loadTheme('".site_root."/admin/plugins/galleria/themes/classic/galleria.classic.js'); Galleria.run('#galleria');</script>";
@@ -358,10 +358,10 @@ if(preg_match("/icon_vector/",$vector_preview))
 		{
 			if(file_exists($_SERVER["DOCUMENT_ROOT"].site_root.$vector_preview_original))
 			{
-				$sz = getimagesize($_SERVER["DOCUMENT_ROOT"].site_root.$vector_preview_url); 
+				$sz = getimagesize($_SERVER["DOCUMENT_ROOT"].site_root.$vector_preview_url);
 				$iframe_width=$sz[0];
 				$iframe_height=$sz[1];
-				
+
 				$boxcontent=str_replace("{IMAGE}","<iframe width=".$iframe_width." height=".$iframe_height." src='".site_root."/members/content_photo_preview.php?id=".$id_parent."&width=".$iframe_width."&height=".$iframe_height."' frameborder=no scrolling=no></iframe>",$boxcontent);
 			}
 		}
@@ -517,18 +517,18 @@ if(file_exists($DOCUMENT_ROOT.server_url($rs->row["server1"])."/".$folder))
 
 				if($subscription_item and $ds->row["shipped"]==1)
 				{
-				
+
 				}
 				else
 				{
 						$content_price="<td nowrap onClick='xcart(".$ds->row["id"].");'><span class='price'>".currency(1).float_opt($ds->row["price"],2,true)." ".currency(2)."</span></td>";
-						
+
 						if($rs->row["free"]==1)
 						{
 							$content_price="";
 						}
-				
-				
+
+
 					$sizeboxes[$dd->row["id_parent"]].="<tr class='tr_cart' id='tr_cart".$ds->row["id"]."'><td onClick='xcart(".$ds->row["id"].");'>".$ds->row["name"]."</td><td onClick='xcart(".$ds->row["id"].");'>".$size."</td>".$content_price."<td onClick='xcart(".$ds->row["id"].");'>".$bt."</td></tr>";
 				}
 
@@ -551,13 +551,13 @@ if(file_exists($DOCUMENT_ROOT.server_url($rs->row["server1"])."/".$folder))
 			{
 				$word_buy=word_lang("download");
 			}
-				
+
 			$text_price="<th>".word_lang("price")."</th>";
 			if($rs->row["free"]==1)
 			{
 				$text_price="";
 			}
-						
+
 			$value="<table border='0' cellpadding='0' cellspacing='0' class='table_cart'><tr valign='top'><th width='40%'>".word_lang("title")."</th><th>".word_lang("size")."</th>".$text_price."<th>".$word_buy."</th></tr>".$value."</table>";
 		}
 		$sizebox.="<div name='p".$key."' id='p".$key."' style='display:".$sizebox_display."'>".$value."</div>";
@@ -565,9 +565,9 @@ if(file_exists($DOCUMENT_ROOT.server_url($rs->row["server1"])."/".$folder))
 	}
 
 	$sizebox="<div style='margin-bottom:6px;margin-top:15px' class='price_license'><a href='".site_root."/members/license.php'>".word_lang("license").":</a></b> ".$sizebox_labels."</div>".$sizebox;
-	
-	
-	
+
+
+
 			if($subscription_item)
 			{
 				$word_cart=word_lang("download");
@@ -575,14 +575,14 @@ if(file_exists($DOCUMENT_ROOT.server_url($rs->row["server1"])."/".$folder))
 				{
 					$word_cart=word_lang("free download");
 				}
-				
+
 				$sizebox.="<input id='item_button_cart' class='add_to_cart' type='button' onclick=\"add_download('vector',".$rs->row["id_parent"].",".$rs->row["server1"].")\" value='".$word_cart."'>";
 			}
 			else
 			{
 				$sizebox.="<input id='item_button_cart' class='add_to_cart' type='button' onclick=\"add_cart(0)\" value='".word_lang("add to cart")."'>";
 			}
-		
+
 
 
 }
@@ -622,7 +622,7 @@ $boxcontent=str_replace("{SCRIPT_VERSION}",$rs->row["script_version"],$boxconten
 		$flag_flash_version=true;
 	}
 	$boxcontent=format_layout($boxcontent,"flash_version",$flag_flash_version);
-	
+
 	$flag_script_version=false;
 	if($rs->row["script_version"]!="")
 	{

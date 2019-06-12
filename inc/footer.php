@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 //Footer template
 if (!$smarty->is_cached('footer.tpl',cache_id('footer')) or $site_cache_footer<0)
 {

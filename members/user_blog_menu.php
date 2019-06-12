@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <form method="post" action="<?=site_root?>/blog/<?=$nameuser?>.html">
 <input type="text" name="blogsearch" style="width:100px;float:left;margin-bottom:20px" value="<?=word_lang("search")?>..." onClick="this.value=''">

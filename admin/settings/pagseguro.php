@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://pagseguro.com.br/"><b>PagSeguro</b></a> is Brazilian payments provider.</p>
 

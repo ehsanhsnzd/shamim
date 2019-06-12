@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_pwinty");
 
-if(!defined("site_root")){exit();}
+
 ?>
 
 <div class="subheader"><?=word_lang("overview")?></div>
@@ -71,12 +71,12 @@ while(!$rs->eof)
 		$sql="insert into pwinty_prints (print_id,activ) values (".$rs->row["id_parent"].",0)";
 		$db->execute($sql);
 	}
-	
+
 	if($id_list!="")
 	{
 		$id_list.="and print_id<>".$rs->row["id_parent"];
 	}
-	
+
 	$rs->movenext();
 }
 
@@ -112,7 +112,7 @@ if(!$rs->eof)
 			</tr>
 			<?
 		}
-		
+
 		$rs->movenext();
 	}
 	?>

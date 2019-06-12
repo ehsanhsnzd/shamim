@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://www.fortumo.com"><b>Fortumo</b></a> is a mobile payments provider.</p>
 

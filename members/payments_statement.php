@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <h1><?=word_lang("purchase statement")?></h1>
 <?
@@ -8,7 +8,7 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 	$billing_info= array();
 	$shipping_info= array();
 	$order_info=array();
-	
+
 	$user_sql="";
 	if(isset($_SESSION["people_id"]) and !isset($_SESSION["entry_admin"]))
 	{
@@ -25,31 +25,31 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 			$user_sql=" user='".result($_SESSION["people_login"])."' and ";
 		}
 	}
-	
-	
+
+
 	if($_GET["product_type"]=="order")
 	{
 
-		
+
 		$sql="select id,shipping_firstname,shipping_lastname,shipping_address,shipping_country,shipping_city,shipping_zip,billing_firstname,billing_lastname,billing_address,billing_country,billing_city,billing_zip,user,total,data from orders where ".$user_sql." id=".(int)$_GET["product_id"];
 		$rs->open($sql);
 		if(!$rs->eof)
 		{
 			$flag=true;
-			
+
 			$order_info["id"]=$rs->row["id"];
 			$order_info["user"]=user_url_back($rs->row["user"]);
 			$order_info["name"]=word_lang("order");
 			$order_info["total"]=$rs->row["total"];
 			$order_info["date"]=date(date_short,$rs->row["data"]);
-			
+
 			$billing_info["billing_firstname"]=$rs->row["billing_firstname"];
 			$billing_info["billing_lastname"]=$rs->row["billing_lastname"];
 			$billing_info["billing_address"]=$rs->row["billing_address"];
 			$billing_info["billing_country"]=$rs->row["billing_country"];
 			$billing_info["billing_city"]=$rs->row["billing_city"];
 			$billing_info["billing_zip"]=$rs->row["billing_zip"];
-			
+
 			$shipping_info["shipping_firstname"]=$rs->row["shipping_firstname"];
 			$shipping_info["shipping_lastname"]=$rs->row["shipping_lastname"];
 			$shipping_info["shipping_address"]=$rs->row["shipping_address"];
@@ -65,20 +65,20 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 		if(!$rs->eof)
 		{
 			$flag=true;
-			
+
 			$order_info["id"]=$rs->row["id_parent"];
 			$order_info["user"]=$rs->row["user"];
 			$order_info["name"]=word_lang("credits").": ".$rs->row["title"];
 			$order_info["total"]=$rs->row["total"];
 			$order_info["date"]=date(date_short,$rs->row["data"]);
-			
+
 			$billing_info["billing_firstname"]=$rs->row["billing_firstname"];
 			$billing_info["billing_lastname"]=$rs->row["billing_lastname"];
 			$billing_info["billing_address"]=$rs->row["billing_address"];
 			$billing_info["billing_country"]=$rs->row["billing_country"];
 			$billing_info["billing_city"]=$rs->row["billing_city"];
 			$billing_info["billing_zip"]=$rs->row["billing_zip"];
-			
+
 			$shipping_info["shipping_firstname"]="";
 			$shipping_info["shipping_lastname"]="";
 			$shipping_info["shipping_address"]="";
@@ -94,20 +94,20 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 		if(!$rs->eof)
 		{
 			$flag=true;
-			
+
 			$order_info["id"]=$rs->row["id_parent"];
 			$order_info["user"]=$rs->row["user"];
 			$order_info["name"]=word_lang("subscription").": ".$rs->row["title"];
 			$order_info["total"]=$rs->row["total"];
 			$order_info["date"]=date(date_short,$rs->row["data1"]);
-			
+
 			$billing_info["billing_firstname"]=$rs->row["billing_firstname"];
 			$billing_info["billing_lastname"]=$rs->row["billing_lastname"];
 			$billing_info["billing_address"]=$rs->row["billing_address"];
 			$billing_info["billing_country"]=$rs->row["billing_country"];
 			$billing_info["billing_city"]=$rs->row["billing_city"];
 			$billing_info["billing_zip"]=$rs->row["billing_zip"];
-			
+
 			$shipping_info["shipping_firstname"]="";
 			$shipping_info["shipping_lastname"]="";
 			$shipping_info["shipping_address"]="";
@@ -120,7 +120,7 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 	if($flag)
 	{
 		?>
-		
+
 		<?
 		if(!isset($_GET["print"]))
 		{
@@ -140,16 +140,16 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 			<?
 		}
 		?>
-		
-		
-		
+
+
+
 		<table border="0" cellpadding="0" cellspacing="0" class="payment_table">
 		<tr valign="top">
 		<th><?=word_lang("billing information")?></th>
 		<th><?=word_lang("payment information")?></th>
 		<th><?=word_lang("order information")?></th>
 		</tr>
-		
+
 		<tr valign="top">
 		<td>
 			<table border="0" cellpadding="0" cellspacing="0" class="payment_table2">
@@ -157,7 +157,7 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 			<td><b><?=word_lang("name")?>:</b></td>
 			<td><?=$billing_info["billing_firstname"]?> <?=$billing_info["billing_lastname"]?></td>
 			</tr>
-			
+
 			<tr>
 			<td><b><?=word_lang("address")?>:</b	></td>
 			<td>
@@ -252,7 +252,7 @@ if(isset($_GET["product_id"]) and isset($_GET["product_type"]) and (isset($_SESS
 		</td>
 		</tr>
 		</table>
-		
+
 		<?
 	}
 ?>

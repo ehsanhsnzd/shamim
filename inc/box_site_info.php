@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 $box_site_info="";
 
 $smarty_info_id="info|".$lng."|".$site_template_id.$site_photo.$site_video.$site_audio.$site_vector.$site_credits.$site_subscription;

@@ -3,7 +3,7 @@
 admin_panel_access("settings_storage");
 
 
-if(!defined("site_root")){exit();}
+
 ?>
 
 <div class="subheader"><?=word_lang("overview")?></div>
@@ -18,7 +18,7 @@ The clouds hosting is cheap, easy and safe way to store media files and distribu
 </p>
 
 <p>
-When you use <b>Rackspace clouds</b> or <b>Amazom S3</b> all files are stored on the <b>local server first</b> and then they are moved to a clouds hosting. 
+When you use <b>Rackspace clouds</b> or <b>Amazom S3</b> all files are stored on the <b>local server first</b> and then they are moved to a clouds hosting.
 </p>
 </div>
 <div class="subheader"><?=word_lang("stats")?></div>
@@ -30,7 +30,7 @@ When you use <b>Rackspace clouds</b> or <b>Amazom S3</b> all files are stored on
 $sql="select id from filestorage where types=1";
 $rs->open($sql);
 if(!$rs->eof)
-{	
+{
 		$rackspace_server=$rs->row["id"];
 }
 
@@ -38,7 +38,7 @@ if(!$rs->eof)
 $sql="select id from filestorage where types=2";
 $rs->open($sql);
 if(!$rs->eof)
-{	
+{
 		$amazon_server=$rs->row["id"];
 }
 
@@ -67,13 +67,13 @@ while(!$rs->eof)
 		$rackspace_files++;
 		$rackspace_storage+=$rs->row["filesize"];
 	}
-	
+
 	if($rs->row["server1"]==$amazon_server)
 	{
 		$amazon_files++;
 		$amazon_storage+=$rs->row["filesize"];
 	}
-	
+
 	$rs->movenext();
 }
 
@@ -107,12 +107,12 @@ $rs->open($sql);
 while(!$rs->eof)
 {
 	$dir = opendir ($DOCUMENT_ROOT.$rs->row["url"]);
-	while ($file = readdir ($dir)) 
+	while ($file = readdir ($dir))
 	{
 		if(is_dir($DOCUMENT_ROOT.$rs->row["url"]."/".$file) and $file*1>1)
 		{
    			 $dir2 = opendir ($DOCUMENT_ROOT.$rs->row["url"]."/".$file);
-   			 while ($file2 = readdir ($dir2)) 
+   			 while ($file2 = readdir ($dir2))
 			{
 				if($file2<>"." and $file2<>"..")
 				{

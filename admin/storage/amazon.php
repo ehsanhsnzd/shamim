@@ -3,7 +3,7 @@
 admin_panel_access("settings_storage");
 
 
-if(!defined("site_root")){exit();}
+
 ?>
 
 <div class="subheader"><?=word_lang("overview")?></div>

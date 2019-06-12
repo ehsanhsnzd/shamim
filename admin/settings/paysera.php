@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://paysera.com"><b>Paysera.com</b></a> is a payments provider.</p>
 

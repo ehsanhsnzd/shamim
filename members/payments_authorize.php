@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_authorize_account!="")
 {
@@ -10,14 +10,14 @@ if($site_authorize_account!="")
 	$invoice	= $product_id;
 	$sequence	= rand(1, 1000);
 	$timeStamp	= time();
-	
+
 	if( phpversion() >= '5.1.2' )
-	{ 
-		$fingerprint = hash_hmac("md5", $loginID . "^" . $sequence . "^" . $timeStamp . "^" . $amount . "^", $transactionKey); 
+	{
+		$fingerprint = hash_hmac("md5", $loginID . "^" . $sequence . "^" . $timeStamp . "^" . $amount . "^", $transactionKey);
 	}
-	else 
-	{ 
-		$fingerprint = bin2hex(mhash(MHASH_MD5, $loginID . "^" . $sequence . "^" . $timeStamp . "^" . $amount . "^", $transactionKey)); 
+	else
+	{
+		$fingerprint = bin2hex(mhash(MHASH_MD5, $loginID . "^" . $sequence . "^" . $timeStamp . "^" . $amount . "^", $transactionKey));
 	}
 
 ?>

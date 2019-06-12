@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
 if($site_nochex_account!=""){
 if(isset($_GET["mode"]) and $_GET["mode"]=="notification")
@@ -25,7 +25,7 @@ $sql="select name,email,telephone,address,country from users where id_parent=".(
 $dr->open($sql);
 if(!$dr->eof)
 {
-?>	
+?>
 <input type="hidden" name="billing_fullname" value="<?=$dr->row["name"]?>" />
 <input type="hidden" name="billing_address" value="<?=$dr->row["address"]?>" />
 <input type="hidden" name="billing_postcode" value="" />

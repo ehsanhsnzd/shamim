@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <? include("admin/function/show.php");?>
 
 
@@ -108,8 +108,8 @@ function add_cart(x)
 		value=document.getElementById("cartprint").value;
 	}
     var req = new JsHttpRequest();
-    
-    
+
+
     // Code automatically called on load finishing.
     req.onreadystatechange = function()
     {
@@ -138,7 +138,7 @@ function add_cart(x)
 function show_prints_preview(id)
 {
     var req = new JsHttpRequest();
-        
+
     // Code automatically called on load finishing.
     req.onreadystatechange = function()
     {
@@ -249,7 +249,7 @@ function reviews_hide()
 
 //Show share tools
 share_flag=true;
-function share_show(value) 
+function share_show(value)
 {
 	if(share_flag)
 	{
@@ -265,8 +265,8 @@ function share_show(value)
         	}
 		}
     	req.open(null, '<?=site_root?>/members/share.php', true);
-    	req.send( { id: value } ); 
-    	share_flag=false; 
+    	req.send( { id: value } );
+    	share_flag=false;
 	}
 	else
 	{
@@ -427,7 +427,7 @@ function apanel(x)
 	$nn++;
 	$rs->movenext();
 	}
-	
+
 	if(($module_table==30 or  $module_table==53) and $site_prints)
 	{
 	?>
@@ -436,7 +436,7 @@ function apanel(x)
 	<?
 	}
 	?>
-	
+
 	//Hide item cart button
 	if(document.getElementById("item_button_cart"))
 	{
@@ -469,7 +469,7 @@ function apanel(x)
 
 
 
-//Show added items 
+//Show added items
 function xcart(x)
 {
 
@@ -506,12 +506,12 @@ function xcart(x)
 	}
 
 
-	    var aRadio = document.getElementsByTagName('input'); 
+	    var aRadio = document.getElementsByTagName('input');
 	    for (var i=0; i < aRadio.length; i++)
-	    { 
-	        if (aRadio[i].type != 'radio') continue; 
-	        if (aRadio[i].value == x) aRadio[i].checked = true; 
-	    } 
+	    {
+	        if (aRadio[i].type != 'radio') continue;
+	        if (aRadio[i].value == x) aRadio[i].checked = true;
+	    }
 
 }
 
@@ -555,15 +555,15 @@ function xprint(x)
 	}
 
 
-	    var aRadio = document.getElementsByTagName('input'); 
+	    var aRadio = document.getElementsByTagName('input');
 	    for (var i=0; i < aRadio.length; i++)
-	    { 
-	        if (aRadio[i].type != 'radio') continue; 
-	        if (aRadio[i].value == -1*x) 
+	    {
+	        if (aRadio[i].type != 'radio') continue;
+	        if (aRadio[i].value == -1*x)
 	        {
-	        	aRadio[i].checked = true; 
+	        	aRadio[i].checked = true;
 	        }
-	    } 
+	    }
 
 }
 
@@ -625,11 +625,11 @@ function add_cart(x)
 			x_number=i;
 		}
 	}
-    
+
     if(flag_add)
     {
     	cart_mass[cart_mass.length]=x;
-    	
+
     	// Code automatically called on load finishing.
     	req.onreadystatechange = function()
     	{
@@ -655,7 +655,7 @@ function add_cart(x)
     else
     {
    	 	cart_mass[x_number]=0;
-   	 	
+
    	 	// Code automatically called on load finishing.
     	req.onreadystatechange = function()
     	{

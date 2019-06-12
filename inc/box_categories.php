@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 $hmenu="";
 
 

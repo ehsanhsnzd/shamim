@@ -1,7 +1,7 @@
 <?
 
 
-if(!defined("site_root")){exit();}
+
 //id_parent determination
 if(isset($_GET["id_parent"]))
 {

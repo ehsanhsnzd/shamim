@@ -1,5 +1,5 @@
 <?if(!isset($_SESSION["people_id"])){exit;}?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?if(userupload==0){exit;}?>
 <?
 

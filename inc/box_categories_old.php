@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 $hmenu="";
 
 
@@ -32,7 +32,7 @@ $hmenu.="<ul>";
 
 $hmenu.="<li class='home_link'><a href='".site_root."/'>".word_lang("home")."</a></li>";
 
- 
+
 
 
 
@@ -87,7 +87,7 @@ if($global_settings["userupload"]==1)
 //}
 
 
-		
+
 		$hmenu.="<li><a href='/contact-us.php'>تماس با ما</a></li>
          <li> <a href='/termofservices.php'>قوانین و مقررات</a>  </li>
          <li> <a href='/report.php'>  ثبت شکایات</a></li> 
@@ -163,9 +163,9 @@ ddsmoothmenu.init({
 
 $hmenu_users.="<ul>";
 
- 
 
- 
+
+
 
 
 
@@ -234,7 +234,7 @@ if($global_settings["userupload"]==1)
  
 		
 		';
- 
+
 
 $hmenu_users.="</ul>";
 $hmenu_users.="</div>";
@@ -256,18 +256,18 @@ $file_template=str_replace("{HORIZONTAL_MENU}",$hmenu,$file_template);
 
 
 $panel1='	  <div class="header-buttons"><a href="../../members/login.php"><button class="login-button">ورود</button></a><a href="../../members/signup.php"><button class="register-button">ثبت نام</button></a></div>';
-  $panel2=' <div class="header-buttons"><a href="../../users/"><button class="login-button">حساب کاربری</button></a> </div>'; 
-   
+  $panel2=' <div class="header-buttons"><a href="../../users/"><button class="login-button">حساب کاربری</button></a> </div>';
+
       session_start();
 	if ($_SESSION['print_user'] !== 'ok'){
 	 $file_template=str_replace("{USER_PANEL}",$panel1,$file_template);
- 
-       	}     else {  
+
+       	}     else {
             	 $file_template=str_replace("{USER_PANEL}",$panel2,$file_template);
 
-             
+
             }
- 
+
 
 
 ?>

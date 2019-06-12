@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_networks");
 ?>
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 
 

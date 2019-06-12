@@ -1,6 +1,6 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 <?
-if(!defined("site_root")){exit();}
+
 ?>
 
 
@@ -63,7 +63,7 @@ for($i=0;$i<count($menu_admin);$i++)
 	<ul id="sub_<?=$menu_admin[$i]?>">
 		<?
 		$flag_first=" class='first'";
-		foreach ($submenu_admin as $key => $value) 
+		foreach ($submenu_admin as $key => $value)
 		{
 			if(preg_match("/^".$menu_admin[$i]."_/",$key) and isset($_SESSION["rights"][$key]))
 			{

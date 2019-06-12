@@ -2,7 +2,7 @@
 //Check access
 admin_panel_access("settings_video");
 
-if(!defined("site_root")){exit();}
+
 ?>
 <form method="post" action="frames_add.php" style="margin-bottom:20px">
 <input name="new" type="text" value="" style="width:200px">&nbsp;<input type="submit" value="<?=word_lang("add")?>" class="btn">
@@ -11,15 +11,15 @@ if(!defined("site_root")){exit();}
 
 
 <?
-//Текущая страница
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if(!isset($_GET["str"])){$str=1;}
 else{$str=(int)$_GET["str"];}
 
-//Количество новостей на странице
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $kolvo=k_str;
 
 
-//Количество страниц на странице
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $kolvo2=k_str2;
 ?>
 

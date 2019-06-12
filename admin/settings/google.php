@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>Login into Google Checkout as a seller,<br> 
 go to <b>My Sales -> Settings -> Integration</b><br>

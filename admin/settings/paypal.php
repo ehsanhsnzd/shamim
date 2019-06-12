@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>Please login on <a href="http://www.paypal.com/">www.paypal.com</a> as merchant</p>
 <p>Enable <b>"Instant Payment Notification"</p>

@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p>Verify your <b>Paypal</b> account status. Go to your <b>PayPal Profile</b> under <b>My settings</b> and verify that your <b>Account Type</b> is either <b>Premier</b> or <b>Business</b>, or upgrade your account.</p>
 

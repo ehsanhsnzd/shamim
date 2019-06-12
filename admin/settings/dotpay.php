@@ -1,4 +1,4 @@
-<?if(!defined("site_root")){exit();}?>
+<??>
 
 <p><a href="http://dotpay.pl"><b>DotPay.pl</b></a> is a payments provider.</p>
 

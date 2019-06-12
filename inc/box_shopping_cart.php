@@ -1,5 +1,5 @@
 <?
-if(!defined("site_root")){exit();}
+
 
 include($DOCUMENT_ROOT."/members/shopping_cart_add_content.php");
 
