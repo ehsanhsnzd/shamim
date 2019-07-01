@@ -136,8 +136,8 @@ if (!empty($search_name)){
 
 		$sql_search="SELECT * FROM users ORDER BY last_date  DESC LIMIT $start , $end";
 	}
-
-$dbresult=mysql_query( $sql_search);
+            mysql_query("SET NAMES 'utf8'", $connection);
+            $dbresult=mysql_query( $sql_search);
 
 
 			while($row = mysql_fetch_array($dbresult)){
