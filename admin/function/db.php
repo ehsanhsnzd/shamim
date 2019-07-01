@@ -1,9 +1,9 @@
 <?
 //MySQL database
-define( "dbuser", "shamimgr_admin" );
-define( "dbpassword", "Fifa2007#" );
-define( "dbname", "shamimgr_shamim" );
-define( "dbhost", "localhost" );
+define( "dbuser", "" );
+define( "dbpassword", "" );
+define( "dbname", "" );
+define( "dbhost", "" );
 
 //Site HTTP URL
 define( "surl", "http://shamimgraphic.ir" );
