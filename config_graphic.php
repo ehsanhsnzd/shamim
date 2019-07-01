@@ -1,9 +1,9 @@
 <?php
 
-	$server_name = 'localhost';
-	$db_username = 'shamimba_admin';
-	$db_password = 'fifa2007';
-	$db_name = 'shamimba_graphic';
+	$server_name = '';
+	$db_username = '';
+	$db_password = '';
+	$db_name = '';
 
 
 

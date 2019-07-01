@@ -1,9 +1,9 @@
 <?php
 
-	$server_name = 'shamigraphic.ir';
-	$db_username = 'shamimba_admin';
-	$db_password = 'fifa2007';
-	$db_name = 'shamimba_shamim';
+	$server_name = '.ir';
+	$db_username = '';
+	$db_password = '';
+	$db_name = '';
 
 
 
