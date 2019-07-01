@@ -1,7 +1,7 @@
 <?php
 
 	$server_name = 'localhost';
-	$db_username = 'shamimgr_admin';
+	$db_username = '';
 	$db_password = 'Fifa2007#';
 	$db_name = 'shamimgr_shamim';
 
