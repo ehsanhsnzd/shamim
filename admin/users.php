@@ -152,7 +152,7 @@ if (!empty($search_name)){
 
                 return $input;
             }
-
+            mysql_query("SET NAMES uft8");
 $dbresult=mysql_query( sql_input($sql_search));
 
 
