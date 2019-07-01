@@ -6,8 +6,8 @@
 	<?php
 		parse_str($_SERVER['QUERY_STRING']);
 
-	
-		
+
+
 		require ('../db_select.php');
 
 
@@ -31,10 +31,10 @@
 	}
 
 if (isset($do) && $do != '' && isset($id) && $id != '') {
- 
+
 	if ($do == 'delete') {
-		 
-		 
+
+
 			$delete_invoice ="DELETE FROM users WHERE id_parent='$id'";
 
 			if (!mysqli_query($connection,$delete_invoice))
@@ -45,13 +45,13 @@ if (isset($do) && $do != '' && isset($id) && $id != '') {
 			else{
 			echo "<span class=\"done-alert\">کاربر مورد نظر با موفقیت حذف گردید.</span>";
 			}}}
-			
- 
 
 
 
 
-		
+
+
+
 	?>
 
 		<h2>لیست کاربران</h2>
@@ -60,13 +60,13 @@ if (isset($do) && $do != '' && isset($id) && $id != '') {
 if(!isset($page) || $page == ''){
 $page = 1;
 }
- echo "<br/> صفحه ی ".$page ." از ".$pages; 
+ echo "<br/> صفحه ی ".$page ." از ".$pages;
 
 ?>
 <form action="<?= $_SERVER['PHP_SELF']?>" method="post">
          کاربری  :    <input name="search_login" type="text" id="search_login">
 
-  
+
          نام  :    <input name="search_name" type="text" id="search_name">
 
               شماره تلفن :    <input name="search_tell" type="text" id="search_tell">
@@ -81,7 +81,7 @@ $page = 1;
 				<th class="th-darker">ردیف</th>
 				<th>نام کاربری</th>
 				<th class="th-darker">ایمیل</th>
-				 
+
 				<th class="th-darker">نام و نام خانوادگی</th>
 				<th>موبایل</th>
 				<th class="th-darker">آدرس</th>
@@ -113,8 +113,8 @@ $page = 1;
         die("<span class=\"login-alert\">مشکلی در اتصال به پایگاه داده پیش آمد لطفا چند لحظه دیگر دوباره بررسی کنید و در صورت مشکل با مدیر سیستم در میان بگذارید.</span>");
     }
     mysql_select_db( $db_name) or die("<span class=\"login-alert\">مشکلی در انتخاب پایگاه داده پیش آمد لطفا چند لحظه دیگر دوباره بررسی کنید و در صورت مشکل با مدیر سیستم در میان بگذارید.</span>");
-	
-	
+
+
 	  $search_login=$_POST['search_login'];
     $search_tell=$_POST['search_tell'];
 	$search_login=$_POST['search_login'];
@@ -131,21 +131,37 @@ if (!empty($search_name)){
 
         $sql_search ="SELECT * FROM users WHERE    login LIKE '%$search_login%' ";
 
-    }	else{	
-			
+    }	else{
+
 
 		$sql_search="SELECT * FROM users ORDER BY last_date  DESC LIMIT $start , $end";
 	}
 
-$dbresult=mysql_query( $sql_search);
+            function sql_input ($input) {
+
+                //$input=preg_replace('/union/i', '_union_', $input);
+                $input=preg_replace('/load_file/i', '', $input);
+                $input=preg_replace('/outfile/i', '', $input);
+                $input=preg_replace('/--/i', '-', $input);
+                $input=preg_replace('/BENCHMARK/i', '', $input);
+                $input=preg_replace('/0x/i', '_0x_', $input);
+                $input=preg_replace('/#/i', '_resh_', $input);
+                $input=preg_replace('/CONCAT/i', '_concat_', $input);
+                $input=preg_replace('/cmd/i', '_cmd_', $input);
+                $input=preg_replace('/exec/i', '_exec_', $input);
+
+                return $input;
+            }
+
+$dbresult=mysql_query( sql_input($sql_search));
 
 
 			while($row = mysql_fetch_array($dbresult)){
 				$users_table_username= $row['login'];
 				$users_table_email= $row['email'];
 				$users_table_pswd_coded= $row['password'];
-                
-               
+
+
 
 
                 $users_table_pswd_encoded = encrypt::decode($users_table_pswd_coded, 'GZvazK@(0D!_hoho12%32');
@@ -171,23 +187,23 @@ $dbresult=mysql_query( $sql_search);
 				if ($users_table_adress == '') {
 					$users_table_adress= '-';
 				}
- 
-				
+
+
 					$users_table_user_id= $row['id_parent'];
 
 
 
 				 $sql_remove_link ="<a href=\"?do=delete&id=$users_table_user_id\"><span class=\"adminpanel-delete-icon\"></span></a>";
-				 
-				 
+
+
 				 $connection = mysqli_connect($server_name, $db_username, $db_password);
 			if(!$connection){
 			die("<span class=\"login-alert\">مشکلی در اتصال به پایگاه داده پیش آمد لطفا چند لحظه دیگر دوباره بررسی کنید و در صورت مشکل با مدیر سیستم در میان بگذارید.</span>");
 		}
 		mysqli_select_db($connection, $db_name) or die("<span class=\"login-alert\">مشکلی در انتخاب پایگاه داده پیش آمد لطفا چند لحظه دیگر دوباره بررسی کنید و در صورت مشکل با مدیر سیستم در میان بگذارید.</span>");
-				 
-				 
-				 
+
+
+
 					if(!	$dbresult3=mysqli_query($connection, "select sum(quantity) as balance,quantity from credits_list where approved=1 and  user='$users_table_username' group by approved")){echo mysqli_error($connection);};
 
 $row2 = mysqli_fetch_array($dbresult3);
@@ -211,8 +227,8 @@ $users_table_balance.= number_format($row2['balance'])." تومان";
 			echo "<tr>";
 				$users_table_balance="";
 			}
-			
-		
+
+
 			?>
 		</table>
 
@@ -220,14 +236,14 @@ $users_table_balance.= number_format($row2['balance'])." تومان";
 			<ul><?php
 				if(isset($page) && $page != '' && $page >=  1){
 					$backpage = $page - 1;
-					$nextpage = $page + 1; 
+					$nextpage = $page + 1;
 				}
 				elseif(isset($page) && $page != '' && $page == $pages) {
 					$backpage = $page - 1;
 					$nextpage = '';
 				}
 				else{
-					$nextpage = 2; 
+					$nextpage = 2;
 				}
 				if(isset($backpage) && $backpage != '' && $backpage >= 1){
 					echo "<a href=\"?page=$backpage\"><li>صفحه قبل</li></a>";
@@ -244,7 +260,7 @@ $users_table_balance.= number_format($row2['balance'])." تومان";
 				if(isset($nextpage) && $nextpage != '' && $nextpage <= $pages){
 					echo "<a href=\"?page=$nextpage\"><li>صفحه بعد</li></a>";
 				}
-		  ?></ul>	
+		  ?></ul>
 		</div>
 
 
