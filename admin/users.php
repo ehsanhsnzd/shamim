@@ -137,23 +137,7 @@ if (!empty($search_name)){
 		$sql_search="SELECT * FROM users ORDER BY last_date  DESC LIMIT $start , $end";
 	}
 
-            function sql_input ($input) {
-
-                //$input=preg_replace('/union/i', '_union_', $input);
-                $input=preg_replace('/load_file/i', '', $input);
-                $input=preg_replace('/outfile/i', '', $input);
-                $input=preg_replace('/--/i', '-', $input);
-                $input=preg_replace('/BENCHMARK/i', '', $input);
-                $input=preg_replace('/0x/i', '_0x_', $input);
-                $input=preg_replace('/#/i', '_resh_', $input);
-                $input=preg_replace('/CONCAT/i', '_concat_', $input);
-                $input=preg_replace('/cmd/i', '_cmd_', $input);
-                $input=preg_replace('/exec/i', '_exec_', $input);
-
-                return $input;
-            }
-            mysql_query("SET NAMES uft8");
-$dbresult=mysql_query( sql_input($sql_search));
+$dbresult=mysql_query( $sql_search);
 
 
 			while($row = mysql_fetch_array($dbresult)){
